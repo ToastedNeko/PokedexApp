@@ -5,6 +5,10 @@
 //  Created by Kinme on 4/20/23.
 //
 
+/*
+    This displays the splashscreen Pokedex cover
+ */
+
 import SwiftUI
 import SSSwiftUIGIFView
 import SDWebImage
@@ -21,30 +25,28 @@ struct PokedexSplashScreenView: View {
             .repeatForever(autoreverses: true)
         
         NavigationStack{
-            ZStack{
-                NavigationLink(destination: ContentView(), isActive: $showPokedex){
-                    ZStack{
-                        Image("PokedexCover")
-                            .resizable()
-                        Button("") {
-                            showPokedex = true
-                            
-                        }
-                        .background(Image("GoldTriangle").resizable().frame(width: 100, height: 100).position(x: -145, y: 110))
-                        .opacity(opacity)
-                        .padding(25)
-                        .shadow(radius: 10)
-                        .onAppear{DispatchQueue.main.async{
-                            withAnimation(animation){
-                                isAnimating = true
-                                self.opacity = 0.3
-                            }
-                        }}
+            NavigationLink(destination: ContentView(), isActive: $showPokedex){
+                ZStack{
+                    Image("PokedexCover")
+                        .resizable()
+                    Button("") {
+                        showPokedex = true
                         
                     }
+                    .background(Image("GoldTriangle").resizable().frame(width: 100, height: 100).position(x: -145, y: 110))
+                    .opacity(opacity)
+                    .padding(25)
+                    .shadow(radius: 10)
+                    .onAppear{DispatchQueue.main.async{
+                        withAnimation(animation){
+                            isAnimating = true
+                            self.opacity = 0.3
+                        }
+                    }}
                     
-                    .background(Color.black.ignoresSafeArea())
                 }
+                .background(Color.black.ignoresSafeArea())
+                
             }
         }
     }
