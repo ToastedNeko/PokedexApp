@@ -25,7 +25,7 @@ struct PokedexSplashScreenView: View {
             .repeatForever(autoreverses: true)
         
         NavigationStack{
-            NavigationLink(destination: ContentView(), isActive: $showPokedex){
+            NavigationLink(destination: PokedexPokemonView(), isActive: $showPokedex){
                 ZStack{
                     Image("PokedexCover")
                         .resizable()
