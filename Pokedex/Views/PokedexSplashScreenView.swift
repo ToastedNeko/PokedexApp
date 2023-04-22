@@ -11,54 +11,41 @@ import SDWebImage
 
 
 struct PokedexSplashScreenView: View {
-    @State private var isActive = false
+    @State private var showPokedex = false
     @State private var opacity = 1.00
+    @State private var isAnimating = false
     
     var body: some View {
-        //        Color.red
-        //            .ignoresSafeArea()
-        //            .overlay(
-        //        ZStack{
-        //            //Color.red
-        //               // .ignoresSafeArea()
-        //
-        //            VStack{
-        //                SwiftUIGIFPlayerView(gifName: "AshPikachuWalk").frame(width: 200, height: 200)
-        //                Text("Pokedex")
-        //                //.foregroundColor(.white)
-        //                    .bold()
-        //                    .font(.system(size: 40))
-        //            }.frame(width: 200, height: 200)
-        //        }.background(Image("PokedexImage"))
-        //)
-        ZStack{
+        let animation = Animation
+            .easeInOut(duration: 1.30)
+            .repeatForever(autoreverses: true)
+        
+        NavigationStack{
             ZStack{
-                
-                Image("PokedexCover")
-                    .resizable()
-                Button(action: {
-                    print("Opening Pokedex")
-                    
-                }) {
-                    HStack {
-//                        Image("")
-//                            .font(.title)
-//                            .fontWeight(.semibold)
-//                            .font(.title)
+                NavigationLink(destination: ContentView(), isActive: $showPokedex){
+                    ZStack{
+                        Image("PokedexCover")
+                            .resizable()
+                        Button("") {
+                            showPokedex = true
+                            
+                        }
+                        .background(Image("GoldTriangle").resizable().frame(width: 100, height: 100).position(x: -145, y: 110))
+                        .opacity(opacity)
+                        .padding(25)
+                        .shadow(radius: 10)
+                        .onAppear{DispatchQueue.main.async{
+                            withAnimation(animation){
+                                isAnimating = true
+                                self.opacity = 0.3
+                            }
+                        }}
+                        
                     }
                     
-                    .padding(25)
-                    .shadow(radius: 10)
-                    .foregroundColor(.white)
-                    .background(Image("GoldTriangle").resizable().frame(width: 100, height: 100))
-                    .opacity(opacity)
-                    .animation(Animation.easeInOut(duration: 1.50).repeatForever(autoreverses: true)).onAppear{self.opacity = 0.3}
-                    
-                    
-                    //.cornerRadius(20)
-                }.offset(y:42)
-                    .offset(x: -146)
-            }.background(Color.black.ignoresSafeArea())
+                    .background(Color.black.ignoresSafeArea())
+                }
+            }
         }
     }
 }
