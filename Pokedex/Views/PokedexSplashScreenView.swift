@@ -43,7 +43,6 @@ struct PokedexSplashScreenView: View {
                             self.opacity = 0.3
                         }
                     }}
-                    
                 }
                 .background(Color.black.ignoresSafeArea())
                 

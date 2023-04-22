@@ -19,6 +19,16 @@ struct PokedexPokemonView: View {
         NavigationView{
                 Text("Content")
                     .bold()
+                    .onAppear{
+                        // print the values of each pokemon for testing purposes
+                        PokemonApi().getData(){ pokemon in
+                            print(pokemon)
+                            for pokemon in pokemon{
+                                print(pokemon.name)
+                                //print(pokemon.)
+                            }
+                        }
+                    }
             }.background(Color.black.ignoresSafeArea())
         }
     }
