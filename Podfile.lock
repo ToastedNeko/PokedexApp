@@ -1,0 +1,22 @@
+PODS:
+  - SDWebImage (5.15.5):
+    - SDWebImage/Core (= 5.15.5)
+  - SDWebImage/Core (5.15.5)
+  - SSSwiftUIGIFView (1.0.0)
+
+DEPENDENCIES:
+  - SDWebImage (~> 5.0)
+  - SSSwiftUIGIFView
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - SSSwiftUIGIFView
+
+SPEC CHECKSUMS:
+  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
+  SSSwiftUIGIFView: f109262cd0baff190b58b519c0e94f7622c428d4
+
+PODFILE CHECKSUM: 107eeb91555be63aa9bec87ce7318d069cd08575
+
+COCOAPODS: 1.12.0

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "diamond-triangle-21-12-yellow-outlined-icon-md.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
