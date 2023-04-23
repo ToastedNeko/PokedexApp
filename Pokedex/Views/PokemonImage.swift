@@ -29,6 +29,8 @@ struct PokemonImage: View {
                     getSprite(url: loadedData!)
                     print("using cached url")
                 }
+                
+                //if loadedData = SDImageCache.shared().
             }
 //            .clipShape(Circle())
 //            .foregroundColor(Color.gray.opacity(0.80))

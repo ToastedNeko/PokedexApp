@@ -25,10 +25,13 @@ import SDWebImage
 struct PokedexPokemonView: View {
     
     @State var pokemon = [PokemonEntry]()  // List of Pokemon in the view
+    
     @State var searchText = ""
     var body: some View {
         
         NavigationView{
+            
+            
             List{
                 // searchbar shows results
                 // if the search bar is empty, display all other pokemon
@@ -41,7 +44,7 @@ struct PokedexPokemonView: View {
 //                        Circle().frame(width: 100, height: 100).offset(x: 50, y: 10)
                         PokemonImage(imageLink: "\(entry.url)").position(x: 240, y: 60)
                         
-                        NavigationLink("\(entry.name)".capitalized, destination: Text("Detail View for \(entry.name)".capitalized)).position(x: 150)
+                        NavigationLink("\(entry.name)".capitalized, destination: Text("Detail View for \(entry.name)".capitalized)).position(x: 150).font(.custom("GillSans", size: 20))
                     }
                 }
             }
@@ -58,9 +61,13 @@ struct PokedexPokemonView: View {
             }
             .searchable(text: $searchText)
             .navigationTitle("Pokedex List")
-                    
+            .toolbarBackground(Color.yellow.opacity(0.90), for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            
             }.background(Color.black.ignoresSafeArea())
+        
         }
+    
     }
 
 struct PokedexPokemonView_Previews: PreviewProvider {

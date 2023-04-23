@@ -14,9 +14,12 @@ import SwiftUI
 
 struct PokemonDetailsView: View {
     var body: some View {
-        Text("This will contain details for each Pokemon")
-        
-        
+        NavigationView{
+            
+            Text("This will contain details for each Pokemon")
+                //.font(Font.custom("PokemonGB", size: 12))
+                .font(.custom("GillSans", size: 20))
+        }
     }
 }
 

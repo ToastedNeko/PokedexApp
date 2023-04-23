@@ -12,6 +12,7 @@
 		7910B3E829F11CFE00A3CF67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7910B3E729F11CFE00A3CF67 /* Assets.xcassets */; };
 		7910B3EB29F11CFE00A3CF67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7910B3EA29F11CFE00A3CF67 /* Preview Assets.xcassets */; };
 		7910B3F529F1208100A3CF67 /* PokedexSplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910B3F429F1208100A3CF67 /* PokedexSplashScreenView.swift */; };
+		7920068129F4DFBA00861517 /* PokemonGB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7920068029F4DFBA00861517 /* PokemonGB.ttf */; };
 		794465E229F3F1A300907D9A /* PokemonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794465E129F3F1A300907D9A /* PokemonDetailsView.swift */; };
 		79B1BB2229F4966200CAD989 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1BB2129F4966200CAD989 /* Pokemon.swift */; };
 		79B1BB2429F49CFA00CAD989 /* PokemonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1BB2329F49CFA00CAD989 /* PokemonSelected.swift */; };
@@ -28,6 +29,8 @@
 		7910B3E729F11CFE00A3CF67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7910B3EA29F11CFE00A3CF67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7910B3F429F1208100A3CF67 /* PokedexSplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexSplashScreenView.swift; sourceTree = "<group>"; };
+		7920067E29F4DBC000861517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7920068029F4DFBA00861517 /* PokemonGB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonGB.ttf; sourceTree = "<group>"; };
 		794465E129F3F1A300907D9A /* PokemonDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsView.swift; sourceTree = "<group>"; };
 		79B1BB2129F4966200CAD989 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		79B1BB2329F49CFA00CAD989 /* PokemonSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelected.swift; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 		7910B3E229F11CFD00A3CF67 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				7920067E29F4DBC000861517 /* Info.plist */,
+				79B1BB2729F4D93500CAD989 /* Fonts */,
 				7910B3F329F1206B00A3CF67 /* Api */,
 				7910B3F129F1205C00A3CF67 /* Views */,
 				7910B3E329F11CFD00A3CF67 /* PokedexApp.swift */,
@@ -120,6 +125,14 @@
 				79B1BB2329F49CFA00CAD989 /* PokemonSelected.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		79B1BB2729F4D93500CAD989 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7920068029F4DFBA00861517 /* PokemonGB.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +197,7 @@
 			files = (
 				7910B3EB29F11CFE00A3CF67 /* Preview Assets.xcassets in Resources */,
 				7910B3E829F11CFE00A3CF67 /* Assets.xcassets in Resources */,
+				7920068129F4DFBA00861517 /* PokemonGB.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +388,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pokedex/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PokedexApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -405,6 +420,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Pokedex/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pokedex/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PokedexApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
