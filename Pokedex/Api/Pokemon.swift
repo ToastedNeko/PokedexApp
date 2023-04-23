@@ -14,6 +14,7 @@
  */
 
 import Foundation
+import SDWebImage
 
 // create an array of Pokemon contained
 struct Pokemon: Codable{
@@ -40,7 +41,7 @@ class PokemonApi{
             // get the list of Pokemon and their results from the url provided
             let pokemonList = try! JSONDecoder().decode(Pokemon.self, from: data)
             DispatchQueue.main.async {
-                completion(pokemonList.results)
+                completion(pokemonList.results) // data we want to return to the user
             }
         }.resume()
     }
