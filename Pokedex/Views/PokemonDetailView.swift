@@ -17,28 +17,33 @@ struct PokemonDetailView: View {
         NavigationView{
             
             VStack(alignment: .center){
-                
                 VStack(alignment: .leading, spacing: 6){
+                   
                     Text(pokemonEntry.name.capitalized)
                     Text("Type: Ball")
                     Text("Height: " + String(pokemonSelected.height))
                     Text("Weight: " + String(pokemonSelected.weight))
-                }.background(Color.yellow.cornerRadius(15).frame(width: 360, height: 170).border(Color.black, width: 4).padding())
-                    
-                    
-                    .position(x: 196, y: 100)
+                   
+                }
+                .background(Color.yellow.cornerRadius(15).frame(width: 360, height: 170).border(.black, width: 4))
+                    //.position(x: 196, y: 100)
                     .font(.custom("GillSans", size: 25))
+                   
                     Divider()
                     if (pokemonSelected.sprites.front_default != nil) {
-                        PokemonImage(imageLink: "\(pokemonSelected.sprites.front_default)").position(x: 175, y: 100).padding()
+                        PokemonImage(imageLink: "\(pokemonSelected.sprites.front_default)").frame(width: 250, height: 250).padding()
                     }
                     Divider()
                     
+                    
                    // HStack{
-                        Text("Description of the Pokeball and its details")
-                            .position(x: 196 , y: 100)
-                            .font(.custom("GillSans", size: 25))
-                            .background(Color.yellow.frame(width: 360, height: 170).border(Color.black, width: 4).padding())
+                VStack{
+                    Text("Description of the Pokeball and its details")
+                        .font(.custom("GillSans", size: 25))
+                        .background(Color.yellow.frame(width: 360, height: 100).cornerRadius(15))
+                    //.position(y: 100)
+                }
+  
                     //} .font(.custom("GillSans", size: 25))
                     
                 
