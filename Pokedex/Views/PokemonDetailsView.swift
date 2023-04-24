@@ -16,8 +16,12 @@ struct PokemonDetailsView: View {
     var body: some View {
         NavigationView{
             
+            VStack{
+               // Text("ID: \()")
+            }
+            
             Text("This will contain details for each Pokemon")
-                //.font(Font.custom("PokemonGB", size: 12))
+                
                 .font(.custom("GillSans", size: 20))
         }
     }

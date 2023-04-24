@@ -5,7 +5,7 @@
 //  Created by Kinme on 4/22/23.
 //
 /*
-    https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1010
+    https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151
  
     Source code used from:
     https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
@@ -18,6 +18,7 @@ struct PokemonSelected: Codable{
     var sprites: PokemonSprites
     var weight: Int
     var height: Int
+    
     //var base_experience: Int
     //var types: String
     //var abilities: String
