@@ -31,21 +31,24 @@ struct PokedexPokemonView: View {
         
         NavigationView{
             
-            
             List{
                 // searchbar shows results
                 // if the search bar is empty, display all other pokemon
                 // otherwise, filter the pokemon with the letters typed
                 ForEach(searchText == "" ? pokemon : pokemon.filter({
                     $0.name.contains(searchText.lowercased())
+                    
                 })) { entry in
-                   
-                    VStack{
+                    
+                    HStack{
+                        NavigationLink("\(entry.name)".capitalized, destination: PokemonDetailView(pokemonEntry: entry))
 //                        Circle().frame(width: 100, height: 100).offset(x: 50, y: 10)
-                        PokemonImage(imageLink: "\(entry.url)").position(x: 240, y: 60)
+                        PokemonImage(imageLink: "\(entry.url)")
+                        Spacer()
+//                        NavigationLink("\(entry.name)".capitalized, destination: Text("Detail View for \(entry.name)".capitalized)).position(x: 150).font(.custom("GillSans", size: 20))
                         
-                        NavigationLink("\(entry.name)".capitalized, destination: Text("Detail View for \(entry.name)".capitalized)).position(x: 150).font(.custom("GillSans", size: 20))
                     }
+                        
                 }
             }
             .onAppear{
@@ -65,6 +68,7 @@ struct PokedexPokemonView: View {
             .toolbarBackground(.visible, for: .navigationBar)
             
             }.background(Color.black.ignoresSafeArea())
+            .font(.custom("GillSans", size: 22))
         
         }
     

@@ -16,6 +16,7 @@ import SDWebImage
 
 struct PokemonSelected: Codable{
     var sprites: PokemonSprites
+    var name: String
     var weight: Int
     var height: Int
     
@@ -32,7 +33,7 @@ struct PokemonSprites: Codable{
 
 class PokemonSelectedApi{
     // once data is retrieved, don't end the function; send it back to us
-    func getData(url: String, completion: @escaping (PokemonSprites) -> ()){
+    func getData(url: String, completion: @escaping (PokemonSelected) -> ()){
         // if there is a url, load the API request needed
         guard let url = URL(string: url) else{
             return
@@ -42,10 +43,10 @@ class PokemonSelectedApi{
                 return
             }
             // get the list of Pokemon and their results from the url provided
-            let pokemonSprite = try! JSONDecoder().decode(PokemonSelected.self, from: data)
+            let pokemonSelected = try! JSONDecoder().decode(PokemonSelected.self, from: data)
             
             DispatchQueue.main.async {
-                completion(pokemonSprite.sprites)  // data we want to return to the user
+                completion(pokemonSelected)  // data we want to return to the user
             }
         }.resume()
     }

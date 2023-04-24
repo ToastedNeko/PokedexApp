@@ -14,14 +14,16 @@ struct PokemonImage: View {
     
     
     var body: some View {
-        AsyncImage(url: URL(string: pokemonSprite))
-            .frame(width: 75, height: 75)
+        AsyncImage(url: URL(string: pokemonSprite), scale: 0.68)
+            .frame(width: 100, height: 100)
+            //.scaledToFit()
             .onAppear{
                 let loadedData = UserDefaults.standard.string(forKey: imageLink)
                     // no loaded data for current image; not cached
                 if loadedData == nil{
                     getSprite(url: imageLink)
                     UserDefaults.standard.set(imageLink, forKey: imageLink)
+                    
                     print("new url caching")
                 }else{
                     // load the old sprite
@@ -32,16 +34,19 @@ struct PokemonImage: View {
                 
                 //if loadedData = SDImageCache.shared().
             }
+                
 //            .clipShape(Circle())
 //            .foregroundColor(Color.gray.opacity(0.80))
+            .background(Image("Placeholder").opacity(0.10).frame(width:0.01, height: 0.01))
+                
     }
    
     func getSprite(url: String){
         var temporarySprite: String?
         
-        PokemonSelectedApi().getData(url: url){ sprite in
-            temporarySprite = sprite.front_default
-            self.pokemonSprite = temporarySprite ?? "Placeholder"
+        PokemonSelectedApi().getData(url: url){ selected in
+            temporarySprite = selected.sprites.front_default
+            self.pokemonSprite = temporarySprite ?? "Pokeball"
         }
     }
 }

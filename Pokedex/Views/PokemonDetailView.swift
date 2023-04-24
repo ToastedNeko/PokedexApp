@@ -1,0 +1,77 @@
+//
+//  PokemonDetailView.swift
+//  Pokedex
+//
+//  Created by Kinme on 4/23/23.
+//
+
+import SwiftUI
+
+struct PokemonDetailView: View {
+    var pokemonEntry: PokemonEntry
+    
+    @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0)
+    
+    
+    var body: some View {
+        NavigationView{
+            
+            VStack(alignment: .center){
+                
+                VStack(alignment: .leading, spacing: 6){
+                    Text(pokemonEntry.name.capitalized)
+                    Text("Type: Ball")
+                    Text("Height: " + String(pokemonSelected.height))
+                    Text("Weight: " + String(pokemonSelected.weight))
+                }.background(Color.yellow.cornerRadius(5).frame(width: 400, height: 170))
+                    .position(x: 200, y: 100)
+                    .font(.custom("GillSans", size: 25))
+                    Divider()
+                    if (pokemonSelected.sprites.front_default != nil) {
+                        PokemonImage(imageLink: "\(pokemonSelected.sprites.front_default)").position(x: 175, y: 100).padding()
+                    }
+                    Divider()
+                    
+                   // HStack{
+                        Text("Description of the Pokeball and its details")
+                            .position(x: 200 , y: 100)
+                            .font(.custom("GillSans", size: 25))
+                    //} .font(.custom("GillSans", size: 25))
+                    
+                
+                
+                
+//                Image("Pokeball2").position(x: 200, y: 250)
+                
+            }.background(Image("Grid").opacity(0.40))
+//            VStack(alignment: .center){
+//
+//                Image("Pokeball2")
+//
+//            }.position(x: 200, y: 200)
+            
+//            VStack{
+//                Text("Name: ")
+//                Text("Type: ")
+//                Text("Weight: ")
+//                Text("Height: ")
+//
+//            }.font(.custom("GillSans", size: 25))
+        }
+        .onAppear{
+            getData(url: pokemonEntry.url)
+        }
+    }
+    
+    func getData(url: String){
+        PokemonSelectedApi().getData(url: url){ data in
+            self.pokemonSelected = data
+        }
+    }
+}
+
+//struct PokemonDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PokemonDetailView(pokemonEntry: PokemonEntry)
+//    }
+//}
