@@ -23,8 +23,10 @@ struct PokemonDetailView: View {
                     Text("Type: Ball")
                     Text("Height: " + String(pokemonSelected.height))
                     Text("Weight: " + String(pokemonSelected.weight))
-                }.background(Color.yellow.cornerRadius(5).frame(width: 400, height: 170))
-                    .position(x: 200, y: 100)
+                }.background(Color.yellow.cornerRadius(15).frame(width: 360, height: 170).border(Color.black, width: 4).padding())
+                    
+                    
+                    .position(x: 196, y: 100)
                     .font(.custom("GillSans", size: 25))
                     Divider()
                     if (pokemonSelected.sprites.front_default != nil) {
@@ -34,8 +36,9 @@ struct PokemonDetailView: View {
                     
                    // HStack{
                         Text("Description of the Pokeball and its details")
-                            .position(x: 200 , y: 100)
+                            .position(x: 196 , y: 100)
                             .font(.custom("GillSans", size: 25))
+                            .background(Color.yellow.frame(width: 360, height: 170).border(Color.black, width: 4).padding())
                     //} .font(.custom("GillSans", size: 25))
                     
                 
@@ -43,7 +46,7 @@ struct PokemonDetailView: View {
                 
 //                Image("Pokeball2").position(x: 200, y: 250)
                 
-            }.background(Image("Grid").opacity(0.40))
+            }.background(Image("Grid").opacity(0.20))
 //            VStack(alignment: .center){
 //
 //                Image("Pokeball2")
