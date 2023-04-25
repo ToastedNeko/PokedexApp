@@ -21,7 +21,7 @@ struct PokemonDetailView: View {
                     Text(" POKEMON ENTRY ").background(Color.white).frame(width: 300, height: 50) .font(.custom("GillSans", size: 28))
                         .bold()
                     
-                    Spacer()
+                   // Spacer()
                     
                 }.fixedSize().background(Color.yellow.cornerRadius(15).frame(width: 360, height: 50).shadow(radius: 20).scaledToFit().overlay(
                     RoundedRectangle(cornerRadius: 20)
