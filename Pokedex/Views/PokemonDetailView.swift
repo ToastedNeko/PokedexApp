@@ -11,14 +11,17 @@ struct PokemonDetailView: View {
     var pokemonEntry: PokemonEntry
     
     @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0)
+    // This doesn't get the currently active sprite
+    
     
     var body: some View {
         NavigationView{
-            VStack{
-                VStack{
-                    Text(" POKEMON ENTRY ").background(Color.white).frame(width: 300, height: 50, alignment: .center) .font(.custom("GillSans", size: 28))
+            VStack(alignment: .center){
+                VStack(alignment: .center){
+                    Text(" POKEMON ENTRY ").background(Color.white).frame(width: 300, height: 50) .font(.custom("GillSans", size: 28))
                         .bold()
                     
+                    Spacer()
                     
                 }.fixedSize().background(Color.yellow.cornerRadius(15).frame(width: 360, height: 50).shadow(radius: 20).scaledToFit().overlay(
                     RoundedRectangle(cornerRadius: 20)
@@ -26,10 +29,13 @@ struct PokemonDetailView: View {
                     
                 ))
                 
+                Spacer()
+                
                 VStack(alignment: .leading, spacing: 6){
                     Spacer()
                     
                     VStack(alignment: .leading, spacing: 6){
+                        
                         Text(pokemonEntry.name.capitalized)
                         Text("Type: Ball")
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
@@ -53,8 +59,11 @@ struct PokemonDetailView: View {
                     //Divider()
                     Spacer()
                     if (pokemonSelected.sprites.front_default != nil) {
-                        PokemonImage(imageLink: "\(pokemonSelected.sprites.front_default)").frame(width: 250, height: 250).scaledToFit().padding()
+//                        PokemonImage(imageLink: "\(pokemonSelected.sprites.front_default)")
+                        
+                        AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.30).frame(width: 200, height: 200).scaledToFit().padding()
                     }
+                    
                     Spacer()
                     
                 }
@@ -66,7 +75,7 @@ struct PokemonDetailView: View {
                     
                     
                     HStack{
-                        Text("Description of the Pokeball and its details.").fixedSize(horizontal: false, vertical: true)
+                        Text("Description of the Pokeball and its details").fixedSize(horizontal: false, vertical: true)
                     }.background(Color.white).frame(width: 300, height: 50, alignment: .center)
                         .font(.custom("GillSans", size: 25))
                     

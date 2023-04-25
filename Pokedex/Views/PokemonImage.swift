@@ -32,7 +32,6 @@ struct PokemonImage: View {
                     print("using cached url")
                 }
                 
-                //if loadedData = SDImageCache.shared().
             }
                 
 //            .clipShape(Circle())
