@@ -12,59 +12,73 @@ struct PokemonDetailView: View {
     
     @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0)
     
-    
     var body: some View {
         NavigationView{
-            
-            VStack(alignment: .center){
-                VStack(alignment: .leading, spacing: 6){
-                   
-                    Text(pokemonEntry.name.capitalized)
-                    Text("Type: Ball")
-                    Text("Height: " + String(pokemonSelected.height))
-                    Text("Weight: " + String(pokemonSelected.weight))
-                   
-                }
-                .background(Color.yellow.cornerRadius(15).frame(width: 360, height: 170).border(.black, width: 4))
-                    //.position(x: 196, y: 100)
-                    .font(.custom("GillSans", size: 25))
-                   
-                    Divider()
-                    if (pokemonSelected.sprites.front_default != nil) {
-                        PokemonImage(imageLink: "\(pokemonSelected.sprites.front_default)").frame(width: 250, height: 250).padding()
-                    }
-                    Divider()
-                    
-                    
-                   // HStack{
+            VStack{
                 VStack{
-                    Text("Description of the Pokeball and its details")
-                        .font(.custom("GillSans", size: 25))
-                        .background(Color.yellow.frame(width: 360, height: 100).cornerRadius(15))
-                    //.position(y: 100)
-                }
-  
-                    //} .font(.custom("GillSans", size: 25))
+                    Text(" POKEMON ENTRY ").background(Color.white).frame(width: 300, height: 50, alignment: .center) .font(.custom("GillSans", size: 25))
+                        .bold()
                     
+                    
+                }.fixedSize().background(Color.yellow.cornerRadius(15).frame(width: 360, height: 50).shadow(radius: 20).scaledToFit().overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.black, lineWidth: 5)
+                    
+                ))
                 
                 
+                VStack(alignment: .leading, spacing: 6){
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: 6){
+                        Text(pokemonEntry.name.capitalized)
+                        Text("Type: Ball")
+                        Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
+                        Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
+                    }.background(Color.white).frame(width: 300, height: 50)
+                    
+                    Spacer()
+                }
                 
-//                Image("Pokeball2").position(x: 200, y: 250)
+                .font(.custom("GillSans", size: 20))
+                .background(Color.yellow.cornerRadius(15).frame(width: 360, height: 150, alignment: .leading).shadow(radius: 20).scaledToFit().overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.black, lineWidth: 5)
+                ))
                 
-            }.background(Image("Grid").opacity(0.20))
-//            VStack(alignment: .center){
-//
-//                Image("Pokeball2")
-//
-//            }.position(x: 200, y: 200)
-            
-//            VStack{
-//                Text("Name: ")
-//                Text("Type: ")
-//                Text("Weight: ")
-//                Text("Height: ")
-//
-//            }.font(.custom("GillSans", size: 25))
+                .font(.custom("GillSans", size: 20))
+                
+                Spacer()
+                
+                VStack(alignment: .center){
+                    //Divider()
+                    Spacer()
+                    if (pokemonSelected.sprites.front_default != nil) {
+                        PokemonImage(imageLink: "\(pokemonSelected.sprites.front_default)").frame(width: 250, height: 250).scaledToFit().padding()
+                    }
+                    Spacer()
+                    
+                }
+                
+                Spacer()
+
+                VStack(alignment: .leading){
+                    Spacer()
+                    
+                    
+                    HStack{
+                        Text("Description of the Pokeball and its details")
+                    }.background(Color.white).frame(width: 300, height: 50, alignment: .center)
+                        .font(.custom("GillSans", size: 20))
+                    
+                    
+                    Spacer()
+                }.background(Color.yellow.cornerRadius(15).frame(width: 360, height: 200).shadow(radius: 20).scaledToFit().overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.black, lineWidth: 5)
+                ))
+                
+            }.background(Image("Grid").opacity(0.10))
         }
         .onAppear{
             getData(url: pokemonEntry.url)
