@@ -16,7 +16,7 @@ struct PokemonDetailView: View {
         NavigationView{
             VStack{
                 VStack{
-                    Text(" POKEMON ENTRY ").background(Color.white).frame(width: 300, height: 50, alignment: .center) .font(.custom("GillSans", size: 25))
+                    Text(" POKEMON ENTRY ").background(Color.white).frame(width: 300, height: 50, alignment: .center) .font(.custom("GillSans", size: 28))
                         .bold()
                     
                     
@@ -25,7 +25,6 @@ struct PokemonDetailView: View {
                         .stroke(Color.black, lineWidth: 5)
                     
                 ))
-                
                 
                 VStack(alignment: .leading, spacing: 6){
                     Spacer()
@@ -40,13 +39,13 @@ struct PokemonDetailView: View {
                     Spacer()
                 }
                 
-                .font(.custom("GillSans", size: 20))
+                .font(.custom("GillSans", size: 25))
                 .background(Color.yellow.cornerRadius(15).frame(width: 360, height: 150, alignment: .leading).shadow(radius: 20).scaledToFit().overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.black, lineWidth: 5)
                 ))
                 
-                .font(.custom("GillSans", size: 20))
+                .font(.custom("GillSans", size: 25))
                 
                 Spacer()
                 
@@ -67,9 +66,9 @@ struct PokemonDetailView: View {
                     
                     
                     HStack{
-                        Text("Description of the Pokeball and its details")
+                        Text("Description of the Pokeball and its details.").fixedSize(horizontal: false, vertical: true)
                     }.background(Color.white).frame(width: 300, height: 50, alignment: .center)
-                        .font(.custom("GillSans", size: 20))
+                        .font(.custom("GillSans", size: 25))
                     
                     
                     Spacer()

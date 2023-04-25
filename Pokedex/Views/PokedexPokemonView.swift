@@ -63,12 +63,12 @@ struct PokedexPokemonView: View {
                 }
             }
             .searchable(text: $searchText)
-            .navigationTitle("Pokedex List")
+            .navigationTitle("POKEDEX LIST")
             .toolbarBackground(Color.yellow.opacity(0.90), for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             
             }.background(Color.black.ignoresSafeArea())
-            .font(.custom("GillSans", size: 22))
+            .font(.custom("GillSans", size: 25))
         
         }
     
