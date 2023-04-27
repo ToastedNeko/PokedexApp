@@ -9,22 +9,33 @@
  
     Source code used from:
     https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
+ 
+    This api call is getting the details within each Pokemon
  */
 
 import Foundation
 import SDWebImage
+
+struct Species: Codable{
+    var name: String = ""
+    var url: String = ""
+}
+
+struct PokemonType: Codable{
+    var type: PokemonTypeType
+}
+
+struct PokemonTypeType: Codable{
+    var name: String = ""
+}
 
 struct PokemonSelected: Codable{
     var sprites: PokemonSprites
     var name: String
     var weight: Int
     var height: Int
-    
-    //var base_experience: Int
-    //var types: String
-    //var abilities: String
-    //var details: String
-    //var location_area_encounters: String
+    var species: Species
+    var types: [PokemonType]
 }
 
 struct PokemonSprites: Codable{
