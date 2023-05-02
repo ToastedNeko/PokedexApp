@@ -31,15 +31,15 @@ struct PokemonDetailView: View {
                 ))
             
                 VStack{
-                    Spacer().frame(height: 75)
+                    Spacer().frame(height: 60)
                     VStack{
                         Spacer()
                         Text(pokemonEntry.name.capitalized)
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
                        
-                    }.background(Color.white).cornerRadius(6).padding(5).frame(width: 300, height: 50)
-                    Spacer().frame(height: 75)
+                    }.fixedSize(horizontal: false, vertical: true).frame(width: 325, height: 110).multilineTextAlignment(.leading).background(Color.white).cornerRadius(6).padding(5).frame(width: 350, height: 100)
+                    Spacer().frame(height: 60)
                 }
                 
                 .font(.custom("GillSans", size: 25))
@@ -51,11 +51,11 @@ struct PokemonDetailView: View {
                 //Spacer()
                
                 VStack{
-                    Spacer().frame(height: 15)
+                    Spacer().frame(height: 55)
                     if (pokemonSelected.sprites.front_default != nil) {
-                        AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.30).frame(width: 200, height: 125).scaledToFit().padding()
+                        AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.40).frame(width: 200, height: 120).scaledToFit().padding()
                     }
-                    Spacer()
+                    Spacer().frame(height: 55)
                 }
                 
                 VStack(alignment: .leading, spacing: 6){
@@ -63,8 +63,8 @@ struct PokemonDetailView: View {
 
 
                                     HStack{
-                                        Text(self.flavorText).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.leading)
-                                        Spacer()
+                                        Text(self.flavorText).fixedSize(horizontal: false, vertical: true).frame(width: 325, height: 200).multilineTextAlignment(.leading)
+                                        //Spacer()
                                     }.background(Color.white).cornerRadius(6).padding(.all).frame(width: 350, height: 50, alignment: .leading)
                                         .font(.custom("GillSans", size: 25))
 

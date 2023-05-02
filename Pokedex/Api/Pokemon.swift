@@ -7,7 +7,7 @@
 /*
      Contains all Pokemon currently available with its
      name and url containing the data:
-     https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1010
+     https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
  
      Source code used from:
      https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
@@ -33,7 +33,7 @@ class PokemonApi{
     // once data is retrieved, don't end the function; send it back to us
     func getData(completion: @escaping ([PokemonEntry]) -> ()){
         // if there is a url, load the API request needed
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1010") else{
+        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251") else{
             return
         }
         URLSession.shared.dataTask(with: url){ (data, _, _) in
