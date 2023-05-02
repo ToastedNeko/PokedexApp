@@ -17,79 +17,69 @@ struct PokemonDetailView: View {
     
     var body: some View {
         NavigationView{
-            VStack(alignment: .center){
-                VStack(alignment: .center){
+            VStack{
+                Spacer()
+                VStack{
+                    Spacer()
                     Text(" POKEMON ENTRY ").background(Color.white).cornerRadius(5).padding(5).frame(width: 300, height: 50).font(.custom("GillSans", size: 28))
                         .bold()
-                    
-                   // Spacer()
-                    
+                    Spacer()
                 }.fixedSize().background(Color.yellow.cornerRadius(10).frame(width: 360, height: 50).shadow(radius: 20).scaledToFit().overlay(
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.black, lineWidth: 5)
                     
                 ))
-                
-                Spacer()
-                
-                VStack(alignment: .leading, spacing: 6){
-                    Spacer()
-                    
-                    VStack(alignment: .leading, spacing: 6){
-                        
+            
+                VStack{
+                    Spacer().frame(height: 75)
+                    VStack{
+                        Spacer()
                         Text(pokemonEntry.name.capitalized)
-                       // Text("Type: " + pokemonSelected.)
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
+                       
                     }.background(Color.white).cornerRadius(6).padding(5).frame(width: 300, height: 50)
-                    
-                    Spacer()
+                    Spacer().frame(height: 75)
                 }
                 
                 .font(.custom("GillSans", size: 25))
                 .background(Color.yellow.cornerRadius(10).frame(width: 360, height: 150, alignment: .leading).shadow(radius: 20).scaledToFit().overlay(
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.black, lineWidth: 5)
+
                 ))
-                
-                .font(.custom("GillSans", size: 25))
-                
-                Spacer()
-                
-                VStack(alignment: .center){
-                    //Divider()
-                   // Spacer()
+                //Spacer()
+               
+                VStack{
+                    Spacer().frame(height: 15)
                     if (pokemonSelected.sprites.front_default != nil) {
-//                        PokemonImage(imageLink: "\(pokemonSelected.sprites.front_default)")
-                        
                         AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.30).frame(width: 200, height: 125).scaledToFit().padding()
                     }
-                    
                     Spacer()
-                    
                 }
                 
-//                Spacer()
+                                HStack{
+                                   Spacer()
 
-                HStack{
-                   // Spacer()
-                    
-                    
-                    HStack{
-                        Text(self.flavorText).fixedSize(horizontal: false, vertical: true)
-                    }.background(Color.white).cornerRadius(6).padding(.all).frame(width: 300, height: 50, alignment: .center)
-                        .font(.custom("GillSans", size: 25))
-                    
-                  //  pokemonSpecies.flavor_text_entries[0].flavor_text
-                    
-                    //Spacer()
-                }.background(Color.yellow.cornerRadius(10).frame(width: 360, height: 100).shadow(radius: 20).scaledToFit().overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.black, lineWidth: 5)
-                ))
-                Spacer()
-                Spacer()
+
+                                    HStack{
+                                        Text(self.flavorText).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.leading)
+                                        Spacer()
+                                    }.background(Color.white).cornerRadius(6).padding(.all).frame(width: 350, height: 50, alignment: .leading)
+                                        .font(.custom("GillSans", size: 25))
+
+                                    Spacer()
+                                }.background(Color.yellow.cornerRadius(10).frame(width: 360, height: 250, alignment: .leading).shadow(radius: 20).scaledToFit().overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.black, lineWidth: 5)
+                                ))
+               //Spacer()
+
+
+               //
             }.background(Image("Grid").opacity(0.10))
+            
+            //Spacer().frame(height: 50)
         }
         .onAppear{
             getData(url: pokemonEntry.url)
