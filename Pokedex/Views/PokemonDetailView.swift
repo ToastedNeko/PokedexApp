@@ -58,7 +58,7 @@ struct PokemonDetailView: View {
                     Spacer()
                 }
                 
-                                HStack{
+                VStack(alignment: .leading, spacing: 6){
                                    Spacer()
 
 
@@ -69,7 +69,7 @@ struct PokemonDetailView: View {
                                         .font(.custom("GillSans", size: 25))
 
                                     Spacer()
-                                }.background(Color.yellow.cornerRadius(10).frame(width: 360, height: 250, alignment: .leading).shadow(radius: 20).scaledToFit().overlay(
+                                }.background(Color.yellow.cornerRadius(10).frame(width: 360, height: 250).shadow(radius: 20).scaledToFit().overlay(
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.black, lineWidth: 5)
                                 ))
