@@ -11,7 +11,6 @@ struct PokemonDetailView: View {
     var pokemonEntry: PokemonEntry
     
     @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0, species: Species(), types: [PokemonType]())
-    // This doesn't get the currently active sprite
     @State var pokemonSpecies = PokemonSpecies(flavor_text_entries: [FlavorTextEntry]())
     @State var flavorText = ""
     
@@ -31,7 +30,7 @@ struct PokemonDetailView: View {
                 VStack{
                     Spacer().frame(height: 10)
                     VStack{
-                        Spacer()
+                       // Spacer()
                         Text(pokemonEntry.name.capitalized)
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
