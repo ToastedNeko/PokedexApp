@@ -65,7 +65,7 @@ struct PokemonDetailView: View {
                                         .font(.custom("GillSans", size: 25))
 
                                    // Spacer()
-                }.cornerRadius(10).padding(EdgeInsets(top: 10, leading: 75, bottom: 10, trailing: 75)).background(.yellow).shadow(radius: 20).overlay(
+                }.cornerRadius(10).padding(EdgeInsets(top: 10, leading: 80, bottom: 10, trailing: 80)).background(.yellow).shadow(radius: 20).overlay(
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.black, lineWidth: 5)
                                 )
