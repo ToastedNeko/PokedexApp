@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImage
+import CachedAsyncImage
 
 struct PokemonImage: View {
     var imageLink = ""
@@ -14,9 +15,9 @@ struct PokemonImage: View {
     
     
     var body: some View {
-        AsyncImage(url: URL(string: pokemonSprite), scale: 0.68)
+        CachedAsyncImage(url: URL(string: pokemonSprite), scale: 0.68)
             .frame(width: 100, height: 100)
-            //.scaledToFit()
+           
             .onAppear{
                 let loadedData = UserDefaults.standard.string(forKey: imageLink)
                     // no loaded data for current image; not cached

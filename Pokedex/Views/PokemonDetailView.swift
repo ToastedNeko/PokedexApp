@@ -48,8 +48,11 @@ struct PokemonDetailView: View {
                 //Spacer()
                
                 VStack{
+                    
+                    
                     Spacer().frame(height: 1)
                     if (pokemonSelected.sprites.front_default != nil) {
+                        
                         AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.40).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1))
                     }
                     Spacer().frame(height: 1)

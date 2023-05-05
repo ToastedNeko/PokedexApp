@@ -15,6 +15,7 @@
 		7920068129F4DFBA00861517 /* PokemonGB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7920068029F4DFBA00861517 /* PokemonGB.ttf */; };
 		7920068329F647D000861517 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7920068229F647D000861517 /* PokemonDetailView.swift */; };
 		79A8DB1C29F9E04A00FF36F4 /* PokemonSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A8DB1B29F9E04A00FF36F4 /* PokemonSpecies.swift */; };
+		79ABD9732A04C98B00263837 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 79ABD9722A04C98B00263837 /* CachedAsyncImage */; };
 		79B1BB2229F4966200CAD989 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1BB2129F4966200CAD989 /* Pokemon.swift */; };
 		79B1BB2429F49CFA00CAD989 /* PokemonSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1BB2329F49CFA00CAD989 /* PokemonSelected.swift */; };
 		79B1BB2629F4CF0300CAD989 /* PokemonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1BB2529F4CF0300CAD989 /* PokemonImage.swift */; };
@@ -46,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE2612355CD9D1C7E36FF8F6 /* Pods_Pokedex.framework in Frameworks */,
+				79ABD9732A04C98B00263837 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +158,9 @@
 			dependencies = (
 			);
 			name = Pokedex;
+			packageProductDependencies = (
+				79ABD9722A04C98B00263837 /* CachedAsyncImage */,
+			);
 			productName = Pokedex;
 			productReference = 7910B3E029F11CFD00A3CF67 /* Pokedex.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +189,9 @@
 				Base,
 			);
 			mainGroup = 7910B3D729F11CFD00A3CF67;
+			packageReferences = (
+				79ABD9712A04C98B00263837 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 7910B3E129F11CFD00A3CF67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -467,6 +475,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		79ABD9712A04C98B00263837 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		79ABD9722A04C98B00263837 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79ABD9712A04C98B00263837 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7910B3D829F11CFD00A3CF67 /* Project object */;
 }
