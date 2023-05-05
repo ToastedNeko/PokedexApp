@@ -61,7 +61,7 @@ struct PokemonDetailView: View {
                 VStack(alignment: .leading, spacing: 6){
                                   // Spacer().frame(height: 5)
                                     HStack{
-                                        Text(self.flavorText).fixedSize(horizontal: true, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading)
+                                        Text(self.flavorText).fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading)
                                         
                                     }.cornerRadius(6).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).background(Color.white)
                                         .font(.custom("GillSans", size: 25))
