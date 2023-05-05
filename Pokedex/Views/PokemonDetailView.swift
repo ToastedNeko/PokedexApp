@@ -26,7 +26,7 @@ struct PokemonDetailView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.black, lineWidth: 5)
                 ).shadow(radius: 5)
-                
+                Spacer().frame(height: 25)
                 VStack{
                     Spacer().frame(height: 10)
                     VStack{
