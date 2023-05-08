@@ -29,8 +29,8 @@ struct PokemonDetailView: View {
                 Spacer().frame(height: 25)
                 VStack{
                     Spacer().frame(height: 10)
-                    VStack{
-                       // Spacer()
+                    VStack(spacing: 6){
+
                         Text(pokemonEntry.name.capitalized)
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
@@ -45,7 +45,6 @@ struct PokemonDetailView: View {
                         .stroke(Color.black, lineWidth: 5)
 
                 ).shadow(radius: 20)
-                //Spacer()
                
                 VStack{
                     
@@ -59,25 +58,21 @@ struct PokemonDetailView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 6){
-                                  // Spacer().frame(height: 5)
+
                                     HStack{
                                         Text(self.flavorText).fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading)
                                         
                                     }.cornerRadius(6).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).background(Color.white)
                                         .font(.custom("GillSans", size: 25))
 
-                                   // Spacer()
                 }.cornerRadius(10).padding(EdgeInsets(top: 10, leading: 80, bottom: 10, trailing: 80)).background(.yellow).shadow(radius: 20).overlay(
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.black, lineWidth: 5)
                                 )
                 Spacer().frame(height: 5)
 
-
-               //
             }.background(Image("Grid").opacity(0.10))
             
-            //Spacer().frame(height: 50)
         }
         .onAppear{
             getData(url: pokemonEntry.url)
@@ -89,8 +84,7 @@ struct PokemonDetailView: View {
             
             self.pokemonSelected = data
             let speciesUrl = data.species.url
-//            self.types = data.types
-            
+
             PokemonSpeciesApi().getData(url: speciesUrl){ speciesData in
                 self.pokemonSpecies = speciesData
                 self.flavorText = speciesData.flavor_text_entries[0].flavor_text

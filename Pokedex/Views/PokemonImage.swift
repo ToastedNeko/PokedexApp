@@ -20,6 +20,7 @@ struct PokemonImage: View {
            
             .onAppear{
                 let loadedData = UserDefaults.standard.string(forKey: imageLink)
+                
                     // no loaded data for current image; not cached
                 if loadedData == nil{
                     getSprite(url: imageLink)
@@ -27,8 +28,8 @@ struct PokemonImage: View {
                     
                     print("new url caching")
                 }else{
+                    
                     // load the old sprite
-
                     getSprite(url: loadedData!)
                     print("using cached url")
                 }

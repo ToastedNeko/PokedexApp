@@ -11,7 +11,7 @@
 
     Contains all Pokemon currently available with its
     name and url containing the data:
-    https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1010
+    https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
   
     Source code used from:
     https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
@@ -42,10 +42,9 @@ struct PokedexPokemonView: View {
                     
                     HStack{
                         NavigationLink("\(entry.name)".capitalized, destination: PokemonDetailView(pokemonEntry: entry))
-//                        Circle().frame(width: 100, height: 100).offset(x: 50, y: 10)
+
                         PokemonImage(imageLink: "\(entry.url)")
                         Spacer()
-//                        NavigationLink("\(entry.name)".capitalized, destination: Text("Detail View for \(entry.name)".capitalized)).position(x: 150).font(.custom("GillSans", size: 20))
                         
                     }
                         
@@ -57,9 +56,7 @@ struct PokedexPokemonView: View {
                 // new array
                 PokemonApi().getData(){ pokemon in
                     self.pokemon = pokemon
-                    
 
-                    
                 }
             }
             .searchable(text: $searchText)
