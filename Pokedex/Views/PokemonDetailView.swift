@@ -23,15 +23,15 @@ struct PokemonDetailView: View {
                     
                     Spacer().frame(height: 5)
                     
-                    Text(" POKEMON ENTRY ").background(Color.white).cornerRadius(5).padding(EdgeInsets(top: 1, leading: 5, bottom: 1, trailing: 5)).font(.custom("GillSans", size: 28)).shadow(radius: 5, x: 5, y: 5)
+                    Text(" POKEMON ENTRY ").background(Color.white).cornerRadius(5).padding(EdgeInsets(top: 1, leading: 5, bottom: 1, trailing: 5)).font(.custom("GillSans", size: 28))
                         .bold()
                     
                     Spacer().frame(height: 5)
                     
-                }.fixedSize().cornerRadius(10).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30)).background(.yellow).overlay(
+                }.fixedSize().cornerRadius(10).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30)).background(.yellow).shadow(radius: 5, x: 6, y: 6).overlay(
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.black, lineWidth: 5)
-                ).shadow(radius: 5, x: 10, y: 5)
+                )
                 
                 Spacer().frame(height: 25)
                 
@@ -45,15 +45,14 @@ struct PokemonDetailView: View {
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
                        
-                    }.fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading).background(Color.white).cornerRadius(6).shadow(radius: 5, x: 10, y: 5)
+                    }.fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading).background(Color.white).cornerRadius(6)
                     Spacer().frame(height: 5)
                 }
                 
                 .font(.custom("GillSans", size: 25))
-                .cornerRadius(10).padding(EdgeInsets(top: 5, leading: 100, bottom: 5, trailing: 100)).background(.yellow).scaledToFit().overlay(
+                .cornerRadius(10).padding(EdgeInsets(top: 5, leading: 100, bottom: 5, trailing: 100)).background(.yellow).shadow(radius: 5, x: 6, y: 6).overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.black, lineWidth: 5).shadow(radius: 5, x: 10, y: 5)
-
+                        .stroke(Color.black, lineWidth: 5)
                 )
                
                 VStack{
@@ -75,10 +74,10 @@ struct PokemonDetailView: View {
                                     }.cornerRadius(6).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).background(Color.white)
                                         .font(.custom("GillSans", size: 25))
 
-                }.cornerRadius(10).padding(EdgeInsets(top: 10, leading: 80, bottom: 10, trailing: 80)).background(.yellow).overlay(
+                }.cornerRadius(10).padding(EdgeInsets(top: 10, leading: 80, bottom: 10, trailing: 80)).background(.yellow).shadow(radius: 5, x: 6, y: 6).overlay(
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.black, lineWidth: 5)
-                                ).shadow(radius: 5, x: 5, y: 5)
+                                )
                 Spacer().frame(height: 5)
                 
                 HStack{
