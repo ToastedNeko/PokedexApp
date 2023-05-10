@@ -14,7 +14,8 @@ The plan for the future is the Pokeball to turn red when marked as captured in t
     
 # Resources
 Source code for part of API Setup and part of PokemonPokedexView:
-    1) SwiftUI Pokédex App...
+
+    1) SwiftUI Pokédex App...    
        https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
 
 # CocoaPods 

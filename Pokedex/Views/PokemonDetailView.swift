@@ -89,7 +89,7 @@ struct PokemonDetailView: View {
                         .aspectRatio(contentMode: .fit)
                     
                     Button(action: {
-                        self.showPokeBall = "Pokeball3"
+                        self.showPokeBall = "PokeBall3"
                     }, label: {
                         Text("Captured")
                     })
