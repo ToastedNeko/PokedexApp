@@ -2,9 +2,9 @@
 
 The goal of this app was to create functional a Pokedex. This Pokedex contains the first and second generations of Pokemon (since they're my favorite ones!). The user can scroll through each Pokemon and see their pokedex entries.
 
-Pokedex entries are based on the original, simplified Pokedex from the first games in the series. The data included is from PokeApi and contains the name, height, weight, and description of each of the Pokemon.
+Pokedex entries are based on the original, simplified pokedex from the first games in the series. The data included is from PokeApi and contains the name, height, weight, and description of each of the Pokemon.
 
-There is also a feature to mark which Pokemon has been caught by the player in game. This is still TODO for the PokemonPokedexView, and incomplete overall as it stands.
+There is also a feature to mark which Pokemon have been caught by the player in game. This is still TODO for the PokemonPokedexView, and incomplete overall as it stands; it still needs to store the user's captured Pokemon.
 
 The plan for the future is the Pokeball to turn red when marked as captured in the PokemonPokedexView.
  
