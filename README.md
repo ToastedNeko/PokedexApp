@@ -1,6 +1,6 @@
 # PokedexApp
 
-The goal of this app was to create functional a Pokedex. This Pokedex contains the first and second generations of Pokemon (since they're my favorite ones!). The user can scroll through Pokemon for each of their entries.
+The goal of this app was to create functional a Pokedex. This Pokedex contains the first and second generations of Pokemon (since they're my favorite ones!). The user can scroll through each Pokemon and see their pokedex entries.
 
 Pokedex entries are based on the original, simplified Pokedex from the first games in the series. The data included is from PokeApi and contains the name, height, weight, and description of each of the Pokemon.
 
