@@ -26,13 +26,13 @@ struct PokemonDetailView: View {
                     
                     Spacer().frame(height: 5)
                     
-                    Text(" POKEMON ENTRY ").background(Color.white).cornerRadius(5).padding(EdgeInsets(top: 1, leading: 5, bottom: 1, trailing: 5)).font(.custom("GillSans", size: 28))
+                    Text(" POKEMON ENTRY ").background(Color.white).cornerRadius(6).padding(EdgeInsets(top: 1, leading: 5, bottom: 1, trailing: 5)).font(.custom("GillSans", size: 28))
                         .bold()
                     
                     Spacer().frame(height: 5)
                     
-                }.fixedSize().cornerRadius(10).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
-                    RoundedRectangle(cornerRadius: 10)
+                }.fixedSize().cornerRadius(6).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
+                    RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.black, lineWidth: 5)
                 )
                 
@@ -48,13 +48,12 @@ struct PokemonDetailView: View {
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
                         
-                    }.fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading).background(Color.white).cornerRadius(6)
+                    }.background(Color.white).cornerRadius(6).fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading)
                     Spacer().frame(height: 5)
                 }
-                
                 .font(.custom("GillSans", size: 25))
-                .cornerRadius(10).padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
-                    RoundedRectangle(cornerRadius: 10)
+                .cornerRadius(5).padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
+                    RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.black, lineWidth: 5)
                 )
                 
@@ -63,7 +62,6 @@ struct PokemonDetailView: View {
                     
                     Spacer().frame(height: 1)
                     if (pokemonSelected.sprites.front_default != nil) {
-                        
                         AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.40).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1))
                     }
                     Spacer().frame(height: 1)
@@ -74,26 +72,38 @@ struct PokemonDetailView: View {
                     HStack{
                         Text(self.flavorText).fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading)
                         
-                    }.cornerRadius(6).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).background(Color.white)
+                    }.cornerRadius(2).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).background(Color.white)
                         .font(.custom("GillSans", size: 25))
                     
-                }.cornerRadius(10).padding(EdgeInsets(top: 10, leading: 80, bottom: 10, trailing: 80)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
-                    RoundedRectangle(cornerRadius: 10)
+                }.cornerRadius(15).padding(EdgeInsets(top: 10, leading: 80, bottom: 10, trailing: 80)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
+                    RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.black, lineWidth: 5)
                 )
+                
                 Spacer().frame(height: 5)
                 
                 VStack{
                     
                     Image(showPokeBall)
                         .aspectRatio(contentMode: .fit)
+                        .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2))
                     
                     Button(action: {
                         self.showPokeBall = "PokeBall3"
                     }, label: {
                         Text("Captured")
-                    })
-                    
+                            .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
+                            .font(.custom("GillSans", size: 25))
+                            .background(Color.blue)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
+                            
+                            
+                    }).overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 4)
+                    ).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
+                    Spacer().frame(height: 5)
 //                    Button("Owned"){
 //                        // show a pokeball
 //                        showPokeBall.toggle()
