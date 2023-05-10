@@ -91,7 +91,7 @@ struct PokemonDetailView: View {
                     Button(action: {
                         self.showPokeBall = "Pokeball3"
                     }, label: {
-                        Text("Owned")
+                        Text("Captured")
                     })
                     
 //                    Button("Owned"){
