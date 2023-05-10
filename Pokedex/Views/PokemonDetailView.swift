@@ -16,8 +16,9 @@ struct PokemonDetailView: View {
     @State var pokemonSpecies = PokemonSpecies(flavor_text_entries: [FlavorTextEntry]())
     @State var flavorText = ""
     @State var showPokeBall = "GrayPokeball3"
-//    @State var showRedPokeBall = false
-//    @State var showGrayPokeBall = true
+    
+    // Get userdefault data in order to save the user's selection
+    // pass this information to the pokedexpokemonview
     
     var body: some View {
         ScrollView{
@@ -103,34 +104,8 @@ struct PokemonDetailView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 4)
                     ).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
+                    
                     Spacer().frame(height: 5)
-//                    Button("Owned"){
-//                        // show a pokeball
-//                        showPokeBall.toggle()
-//                        //showRedPokeBall.disabled(false)
-//
-//
-//                    }.background(Color.red)
-                    
-                    
-//                    Button("Not Owned"){
-//                        // show a grayed out, low opacity pokeball
-//                        showGrayPokeBall.toggle()
-//                        //showRedPokeBall.disabled(false)
-//
-//                    }.background(Color.red).scenePadding()
-                    
-                    // Pokeball3
-                    // GrayPokeball3
-//
-//                    if(showRedPokeBall){
-//
-//                    }
-                    
-//                    if(showGrayPokeBall){
-//                        Image("GrayPokeball3")
-//                        Image(self.showPokeBall).hidden()
-//                    }
 
                 }.padding(EdgeInsets(top: 50, leading: 0, bottom: 10, trailing: 0))
                 
@@ -161,3 +136,5 @@ struct PokemonDetailView: View {
 //        PokemonDetailView(pokemonEntry: PokemonEntry)
 //    }
 //}
+
+
