@@ -34,8 +34,7 @@ struct PokedexSplashScreenView: View {
                         
                     }
                     .background(Image("GoldTriangle").resizable()
-                    // TODO 
-                    // probably use padding instead so size properly per device
+                        .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                     .frame(width: 100, height: 100).position(x: -145, y: 110))
                     .opacity(opacity)
                     .padding(25)

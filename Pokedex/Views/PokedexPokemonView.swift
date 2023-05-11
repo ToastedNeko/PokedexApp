@@ -43,7 +43,7 @@ struct PokedexPokemonView: View {
                     HStack{
                         
                         // Default image is a grayscale, low opacity pokeball to signify the user doesn't yet own this Pokemon
-                        Image("GrayPokeball1").opacity(0.4).padding(EdgeInsets(top: 1, leading: 8, bottom: 1, trailing: 10))
+                        Image("GrayPokeball1").opacity(0.4).padding(EdgeInsets(top: 1, leading: -6, bottom: 1, trailing: 4))
                         NavigationLink("\(entry.name)".capitalized, destination: PokemonDetailView(pokemonEntry: entry))
                         
                         PokemonImage(imageLink: "\(entry.url)")
@@ -68,7 +68,7 @@ struct PokedexPokemonView: View {
             .toolbarBackground(.visible, for: .navigationBar)
             
             }.background(Color.black.ignoresSafeArea())
-            .font(.custom("GillSans", size: 25))
+            .font(.custom("GillSans", size: 23))
         
         }
     
