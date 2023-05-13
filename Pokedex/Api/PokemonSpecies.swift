@@ -5,6 +5,13 @@
 //  Created by Kinme on 4/26/23.
 //
 
+/*
+ 
+ This View gets the species so that the description of
+ each Pokemon can be gotten for the PokemonDetailView
+ 
+ */
+
 import Foundation
 
 struct PokemonSpecies: Codable{

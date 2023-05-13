@@ -5,13 +5,15 @@
 //  Created by Kinme on 4/22/23.
 //
 /*
-    Contains pokemon from generations 1 and 2
-    https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
  
-    Source code used from:
-    https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
+ Contains pokemon from generations 1 and 2
+ https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
  
-    This api call is getting the details within each Pokemon
+ Source code used from:
+ https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
+ 
+ This API call is getting the details within each Pokemon
+ 
  */
 
 import Foundation

@@ -6,7 +6,9 @@
 //
 
 /*
+ 
  This displays the splashscreen Pokedex cover
+ 
  */
 
 import SwiftUI

@@ -4,7 +4,17 @@
 //
 //  Created by Kinme on 4/23/23.
 //
-// 
+//
+
+/*
+ 
+ This displays the details of a Pokemon selected by user
+ in the PokedexPokemonView.
+ 
+ It displays the name, number, weight, height, and description
+ of the Pokemon chosen.
+ 
+ */
 
 
 import SwiftUI
@@ -26,13 +36,17 @@ struct PokemonDetailView: View {
                     Spacer().frame(height: 5)
                     
                     // Display the Pokemon Entry
-                    Text(pokemonEntry.name.uppercased()).frame(width: 285, height: 50).background(Color.white).cornerRadius(6).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30)).font(.custom("GillSans", size: 26))
+                    Text(pokemonEntry.name.uppercased())
+                        .frame(width: 285, height: 50)
+                        .background(Color.white)
+                        .cornerRadius(6)
+                        .padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+                        .font(.custom("GillSans", size: 26))
                         .bold()
                     
                     Spacer().frame(height: 5)
                     
                 }.cornerRadius(5)
-                    //.padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100))
                     .background(.yellow)
                     .shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
                     .overlay(
@@ -56,13 +70,11 @@ struct PokemonDetailView: View {
                     .background(Color.white)
                     .cornerRadius(6)
                     .padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
-//                    .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.leading)
                     
                     Spacer().frame(height: 5)
                 }
                 .cornerRadius(5)
-                //.padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100))
                 .background(.yellow)
                 .shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
                 .overlay(
@@ -77,9 +89,8 @@ struct PokemonDetailView: View {
                     // Display Pokemon sprite from API
                     if (pokemonSelected.sprites.front_default != nil) {
                         AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.55)
-                            //.frame(width: 200, height: 100)
                             .padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1))
- 
+                        
                     }
                     
                     Spacer().frame(height: 1)
@@ -96,15 +107,12 @@ struct PokemonDetailView: View {
                             .background(Color.white)
                             .cornerRadius(6)
                             .padding(EdgeInsets(top: 10, leading: 37, bottom: 10, trailing: 37))
-                            //.fixedSize(horizontal: false, vertical: true)
                             .multilineTextAlignment(.leading)
                         
                     }
                     
                 }
-                
                 .cornerRadius(5)
-                //.padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100))
                 .background(.yellow)
                 .shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
                 .overlay(
@@ -153,10 +161,10 @@ struct PokemonDetailView: View {
                                 )
                         }
                         .padding(EdgeInsets(top: 40, leading: 0, bottom: 20, trailing: 20))
-                        
                     }
                 }
-            }.background(Image("Grid").opacity(0.10))
+            }
+            .background(Image("Grid").opacity(0.10))
         }
         .onAppear{
             getData(url: pokemonEntry.url)

@@ -5,6 +5,7 @@
 //  Created by Kinme on 4/22/23.
 //
 /*
+ 
  Contains all Pokemon currently available with its
  name and url containing the data:
  https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251

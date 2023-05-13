@@ -32,7 +32,6 @@ class CapturedPokemon: ObservableObject{
     @Published var currentPokemonIndex: Int = 0
     
     func toggleCapture(pokemonName: String) {
-        
         if let isCaptured = capturedPokemon[pokemonName] {
             capturedPokemon[pokemonName] = !isCaptured
         } else {
