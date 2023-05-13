@@ -12,21 +12,21 @@
      Source code used from:
      https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
  
- 
  */
 
-import Foundation
 import SDWebImage
 
 // create an array of Pokemon contained
 struct Pokemon: Codable{
     var results: [PokemonEntry]
+    
 }
 
 struct PokemonEntry: Codable, Identifiable{
     let id = UUID() 
     var name: String
     var url: String
+    
 }
 
 class PokemonApi{

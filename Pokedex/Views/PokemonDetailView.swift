@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+
 struct PokemonDetailView: View {
     var pokemonEntry: PokemonEntry
     
@@ -16,8 +17,8 @@ struct PokemonDetailView: View {
     @State var pokemonSpecies = PokemonSpecies(flavor_text_entries: [FlavorTextEntry]())
     @State var flavorText = ""
     @State var showPokeBall = "GrayPokeball3"
-    let userDefaultCaptured = UserDefaults.standard
-    
+    @EnvironmentObject var capturedPokemon: CapturedPokemon
+    //@ObservedObject private var capturedPokemon: CapturedPokemon = .shared
     // Get userdefault data in order to save the user's selection
     // pass this information to the pokedexpokemonview
     
@@ -87,33 +88,61 @@ struct PokemonDetailView: View {
                         .stroke(Color.black, lineWidth: 5)
                 )
                 
-                Spacer().frame(height: 5)
+                Spacer().frame(height: 1)
                 
                 VStack{
                     
                     // Allows the user to mark the Pokemon as captured or not
-                    Image(showPokeBall)
-                        .aspectRatio(contentMode: .fit)
-                        .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2))
+                    //                    Image(showPokeBall)
+                    //                        .aspectRatio(contentMode: .fit)
+                    //                        .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2))
+                    //
+                    //                    Button(action: {
+                    //                        self.showPokeBall = "PokeBall3"
+                    //                        userDefaultCaptured.set(self.showPokeBall, forKey: "Captured")
+                    //                    }, label: {
+                    //                        Text("Captured")
+                    //                            .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
+                    //                            .font(.custom("GillSans", size: 25))
+                    //                            .background(Color.blue)
+                    //                            .foregroundColor(Color.white)
+                    //                            .cornerRadius(10)
+                    //
+                    //                    }).overlay(
+                    //                        RoundedRectangle(cornerRadius: 10)
+                    //                            .stroke(Color.black, lineWidth: 4)
+                    //                    ).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
+                    //
+                    //                    Spacer().frame(height: 5)
                     
                     Button(action: {
-                        self.showPokeBall = "PokeBall3"
-                        userDefaultCaptured.set(self.showPokeBall, forKey: "Captured")
-                    }, label: {
-                        Text("Captured")
-                            .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
-                            .font(.custom("GillSans", size: 25))
-                            .background(Color.blue)
-                            .foregroundColor(Color.white)
-                            .cornerRadius(10)
+                        capturedPokemon.toggleCapture(pokemonName: pokemonEntry.name)
+                        
+                    }) {
+                        VStack{
+                            if(capturedPokemon.isPokemonCaptured(pokemonName: pokemonEntry.name)){
+                                Image("PokeBall3")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                            }else{
+                                Image("GrayPokeball3")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 40, height: 40)
+                                    .opacity(0.4)
+                            }
                             
-                    }).overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.black, lineWidth: 4)
-                    ).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
+                            Text(capturedPokemon.isPokemonCaptured(pokemonName: pokemonEntry.name) ? "Not Captured" : "Captured")
+                                .padding()
+                                .background(Color.red)
+                                .foregroundColor(.white)
+                                .cornerRadius(5)
+                        }
+                        .padding()
+                        
+                    }.padding()
                     
-                    Spacer().frame(height: 5)
-
                 }.padding(EdgeInsets(top: 50, leading: 0, bottom: 10, trailing: 0))
                 
             }.background(Image("Grid").opacity(0.10))
@@ -121,6 +150,10 @@ struct PokemonDetailView: View {
         }
         .onAppear{
             getData(url: pokemonEntry.url)
+            capturedPokemon.loadCapturedPokemon()
+//            print(capturedPokemon.isPokemonCaptured(pokemonName: pokemonEntry.name))
+//            print(pokemonEntry)
+//            print(pokemonEntry.id)
         }
     }
     
@@ -144,5 +177,4 @@ struct PokemonDetailView: View {
 //        PokemonDetailView(pokemonEntry: PokemonEntry)
 //    }
 //}
-
 

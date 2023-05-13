@@ -10,9 +10,12 @@ import SwiftUI
 
 @main
 struct PokedexApp: App {
+    @ObservedObject private var capturedPokemon = CapturedPokemon()
+    
     var body: some Scene {
         WindowGroup {
             PokedexSplashScreenView()
+                .environmentObject(capturedPokemon)
         }
     }
 }

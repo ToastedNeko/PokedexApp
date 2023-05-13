@@ -15,11 +15,11 @@
 import SwiftUI
 import SDWebImage
 import CachedAsyncImage
+import Foundation
 
 struct PokemonImage: View {
     var imageLink = ""
     @State private var pokemonSprite = ""
-    
     
     var body: some View {
         CachedAsyncImage(url: URL(string: pokemonSprite), scale: 0.68)
@@ -33,12 +33,12 @@ struct PokemonImage: View {
                     getSprite(url: imageLink)
                     UserDefaults.standard.set(imageLink, forKey: imageLink)
                     
-                    print("new url caching")
+                   // print("new url caching")
                 }else{
                     
                     // load the old sprite
                     getSprite(url: loadedData!)
-                    print("using cached url")
+                   // print("using cached url")
                 }
                 
             }
