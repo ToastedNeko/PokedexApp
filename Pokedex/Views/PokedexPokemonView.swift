@@ -28,61 +28,58 @@ struct PokedexPokemonView: View {
     @State var pokemon = [PokemonEntry]() // List of Pokemon in the view
     @State var searchText = ""
     @EnvironmentObject var capturedPokemon: CapturedPokemon
-    //var pokemonEntry: PokemonEntry
     
     var body: some View {
-        NavigationView{
-            
-            List{
-                // searchbar shows results
-                // if the search bar is empty, display all other pokemon
-                // otherwise, filter the pokemon with the letters typed
-                ForEach(searchText == "" ? pokemon : pokemon.filter({
-                    $0.name.contains(searchText.lowercased())
-                    
-                })) { entry in
-                    
-                    HStack{
+
+            NavigationView{
+                List{
+                    // searchbar shows results
+                    // if the search bar is empty, display all other pokemon
+                    // otherwise, filter the pokemon with the letters typed
+                    ForEach(searchText == "" ? pokemon : pokemon.filter({
+                        $0.name.contains(searchText.lowercased())
                         
-                        // Default image is a grayscale, low opacity pokeball to signify the user doesn't yet own this Pokemon
-                        //
+                    })) { entry in
                         
-                        if(capturedPokemon.isPokemonCaptured(pokemonName: entry.name)){
-                            Image("Pokeball1").padding(EdgeInsets(top: 1, leading: -6, bottom: 1, trailing: 4))
-                        }else{
-                            Image("GrayPokeball1").opacity(0.4).padding(EdgeInsets(top: 1, leading: -6, bottom: 1, trailing: 4))
+                        HStack{
+                            
+                            // Default image is a grayscale, low opacity pokeball to signify the user doesn't yet own this Pokemon
+                            if(capturedPokemon.isPokemonCaptured(pokemonName: entry.name)){
+                                Image("Pokeball1").padding(EdgeInsets(top: 1, leading: -6, bottom: 1, trailing: 4))
+                            }else{
+                                Image("GrayPokeball1").opacity(0.4).padding(EdgeInsets(top: 1, leading: -6, bottom: 1, trailing: 4))
+                            }
+                            
+                            NavigationLink("\(entry.name)".capitalized, destination: PokemonDetailView(pokemonEntry: entry)
+                                .environmentObject(capturedPokemon))
+                            
+                            PokemonImage(imageLink: "\(entry.url)")
+                            
+                            Spacer()
+                    
                         }
-                        
-                        NavigationLink("\(entry.name)".capitalized, destination: PokemonDetailView(pokemonEntry: entry)
-                            .environmentObject(capturedPokemon))
-                        
-                        PokemonImage(imageLink: "\(entry.url)")
-                        
-                        Spacer()
-                        
+                        .padding(.vertical, 5)
                     }
                 }
-            }
-            .onAppear{
-                // call the completion listener
-                // once completion is retreived, return it and assign to
-                // new array
-                PokemonApi().getData(){ pokemon in
-                    self.pokemon = pokemon
-                    
+                
+                .onAppear{
+                    // call the completion listener
+                    // once completion is retreived, return it and assign to
+                    // new array
+                    PokemonApi().getData(){ pokemon in
+                        self.pokemon = pokemon
+                        
+                    }
+                    capturedPokemon.loadCapturedPokemon()
                 }
-                capturedPokemon.loadCapturedPokemon()
-            }
-            .searchable(text: $searchText)
-            .navigationTitle("POKEDEX LIST")
-            .toolbarBackground(Color.yellow.opacity(0.90), for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            
-        }.background(Color.black.ignoresSafeArea())
-            .font(.custom("GillSans", size: 23))
-        
+                .searchable(text: $searchText)
+                .navigationTitle("POKEDEX LIST")
+                .toolbarBackground(Color.yellow.opacity(0.90), for: .navigationBar)
+                .toolbarBackground(.visible, for: .navigationBar)
+                
+            }.background(Color.black.ignoresSafeArea())
+                .font(.custom("GillSans", size: 23))
     }
-    
 }
 
 //struct PokedexPokemonView_Previews: PreviewProvider {

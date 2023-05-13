@@ -6,7 +6,7 @@
 //
 
 /*
-    This displays the splashscreen Pokedex cover
+ This displays the splashscreen Pokedex cover
  */
 
 import SwiftUI
@@ -20,6 +20,7 @@ struct PokedexSplashScreenView: View {
     @State private var isAnimating = false
     
     var body: some View {
+        
         let animation = Animation
             .easeInOut(duration: 1.30)
             .repeatForever(autoreverses: true)
@@ -29,13 +30,14 @@ struct PokedexSplashScreenView: View {
                 ZStack{
                     Image("PokedexCover")
                         .resizable()
+                    
                     Button("") {
                         showPokedex = true
                         
                     }
                     .background(Image("GoldTriangle").resizable()
                         .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
-                    .frame(width: 100, height: 100).position(x: -145, y: 110))
+                        .frame(width: 100, height: 100).position(x: -145, y: 110))
                     .opacity(opacity)
                     .padding(25)
                     .shadow(radius: 10)
@@ -47,12 +49,10 @@ struct PokedexSplashScreenView: View {
                     }}
                 }
                 .background(Color.black.ignoresSafeArea())
-                
             }
         }
     }
 }
-
 
 struct PokedexSplashScreenView_Previews: PreviewProvider {
     static var previews: some View {

@@ -38,22 +38,29 @@ struct PokemonDetailView: View {
                 
                 Spacer().frame(height: 25)
                 
-                VStack{
-                    
+                VStack {
                     Spacer().frame(height: 10)
                     
-                    VStack(spacing: 6){
-                        
+                    VStack(spacing: 6) {
                         // Display Pokemon Entry details from API
                         Text(pokemonEntry.name.capitalized)
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
-                        
-                    }.background(Color.white).cornerRadius(6).fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading)
+                    }
+                    .font(.custom("GillSans", size: 25))
+                    .padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1))
+                    .background(Color.white)
+                    .cornerRadius(6)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
+                    
                     Spacer().frame(height: 5)
                 }
-                .font(.custom("GillSans", size: 25))
-                .cornerRadius(5).padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
+                .cornerRadius(5)
+                .padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100))
+                .background(.yellow)
+                .shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
+                .overlay(
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.black, lineWidth: 5)
                 )
@@ -118,10 +125,10 @@ struct PokemonDetailView: View {
                                     )
                                 )
                                 .foregroundColor(.white)
-                                .cornerRadius(10)
+                                .cornerRadius(20)
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.black, lineWidth: 2)
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(Color.black, lineWidth: 3)
                                 )
                         }
                         .padding(EdgeInsets(top: 40, leading: 0, bottom: 20, trailing: 20))
