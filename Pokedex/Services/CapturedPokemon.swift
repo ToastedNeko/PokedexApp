@@ -11,13 +11,13 @@
  name and url containing the data:
  https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
  
- This class allows user to being able to mark a pokemon as captured or not
- in the pokedex. UserDefaults is being used to store each of the Pokemon
+ This class allows user to being able to mark a Pokemon as captured or not
+ in the Pokedex. UserDefaults is being used to store each of the Pokemon
  that the user has captured in the PokemonDetailView.
  
- This is displayed in the PokemonDetailView as a pokeball that is gray or red.
+ This is displayed in the PokedexPokemonView as a pokeball that is gray or red.
  This is also displayed in the PokemonDetailView as a button press and a pokeball
- that is either red or gray.
+ that is either red or gray. It is red on caught, and gray on not caught.
  
  We discussed UserDefaults in class and I also used references:
  https://www.simpleswiftguide.com/how-to-use-userdefaults-in-swiftui/
@@ -37,7 +37,6 @@ class CapturedPokemon: ObservableObject{
         } else {
             capturedPokemon[pokemonName] = true
         }
-        
         saveCapturedPokemon()
     }
     

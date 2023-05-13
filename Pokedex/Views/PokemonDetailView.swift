@@ -195,26 +195,3 @@ struct PokemonDetailView: View {
 //        PokemonDetailView(pokemonEntry: PokemonEntry)
 //    }
 //}
-
-// Allows the user to mark the Pokemon as captured or not
-//                    Image(showPokeBall)
-//                        .aspectRatio(contentMode: .fit)
-//                        .padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2))
-//
-//                    Button(action: {
-//                        self.showPokeBall = "PokeBall3"
-//                        userDefaultCaptured.set(self.showPokeBall, forKey: "Captured")
-//                    }, label: {
-//                        Text("Captured")
-//                            .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
-//                            .font(.custom("GillSans", size: 25))
-//                            .background(Color.blue)
-//                            .foregroundColor(Color.white)
-//                            .cornerRadius(10)
-//
-//                    }).overlay(
-//                        RoundedRectangle(cornerRadius: 10)
-//                            .stroke(Color.black, lineWidth: 4)
-//                    ).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
-//
-//                    Spacer().frame(height: 5)
