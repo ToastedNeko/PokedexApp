@@ -81,7 +81,6 @@ struct PokedexPokemonView: View {
         }.background(Color.black.ignoresSafeArea())
             .font(.custom("GillSans", size: 23))
         
-        
     }
     
 }

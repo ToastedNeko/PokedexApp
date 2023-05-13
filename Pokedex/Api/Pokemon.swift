@@ -5,12 +5,12 @@
 //  Created by Kinme on 4/22/23.
 //
 /*
-     Contains all Pokemon currently available with its
-     name and url containing the data:
-     https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
+ Contains all Pokemon currently available with its
+ name and url containing the data:
+ https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
  
-     Source code used from:
-     https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
+ Source code used from:
+ https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
  
  */
 
@@ -23,7 +23,7 @@ struct Pokemon: Codable{
 }
 
 struct PokemonEntry: Codable, Identifiable{
-    let id = UUID() 
+    let id = UUID()
     var name: String
     var url: String
     

@@ -6,6 +6,7 @@
 //
 
 /*
+ 
  Contains all Pokemon currently available with its
  name and url containing the data:
  https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
@@ -21,15 +22,16 @@
  We discussed UserDefaults in class and I also used references:
  https://www.simpleswiftguide.com/how-to-use-userdefaults-in-swiftui/
  https://www.hackingwithswift.com/books/ios-swiftui/storing-user-settings-with-userdefaults
+ 
  */
 
 import SwiftUI
 
 class CapturedPokemon: ObservableObject{
-    
     @Published var capturedPokemon: [String: Bool] = [:]
     
     func toggleCapture(pokemonName: String) {
+        
         if let isCaptured = capturedPokemon[pokemonName] {
             capturedPokemon[pokemonName] = !isCaptured
         } else {
@@ -58,5 +60,4 @@ class CapturedPokemon: ObservableObject{
             //print(loadedCapturedPokemon)
         }
     }
-    
 }

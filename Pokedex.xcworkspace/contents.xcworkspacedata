@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/kinme/Desktop/PokedexApp/Pokedex/Api/PokemonOwnedByUser.swift">
-   </FileRef>
-   <FileRef
       location = "group:Pokedex.xcodeproj">
    </FileRef>
    <FileRef

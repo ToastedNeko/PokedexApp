@@ -6,6 +6,13 @@
 
 // This app is a pokedex that contains 151 different Pokemon and details for them.
 
+/*
+ 
+ Environment Objects:
+ https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share-data-between-views
+ https://developer.apple.com/documentation/swiftui/environmentobject
+ */
+
 import SwiftUI
 
 @main
