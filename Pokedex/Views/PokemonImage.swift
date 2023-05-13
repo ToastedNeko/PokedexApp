@@ -22,8 +22,8 @@ struct PokemonImage: View {
     @State private var pokemonSprite = ""
     
     var body: some View {
-        CachedAsyncImage(url: URL(string: pokemonSprite), scale: 0.68)
-            .frame(width: 100, height: 100)
+        CachedAsyncImage(url: URL(string: pokemonSprite))
+            .frame(width: 85, height: 85)
            
             .onAppear{
                 let loadedData = UserDefaults.standard.string(forKey: imageLink)

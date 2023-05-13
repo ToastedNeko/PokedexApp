@@ -22,7 +22,7 @@ struct Pokemon: Codable{
     
 }
 
-struct PokemonEntry: Codable, Identifiable{
+struct PokemonEntry: Codable, Identifiable, Hashable{
     let id = UUID()
     var name: String
     var url: String

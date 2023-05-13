@@ -26,38 +26,43 @@ struct PokemonDetailView: View {
                     Spacer().frame(height: 5)
                     
                     // Display the Pokemon Entry
-                    Text(" POKEMON ENTRY ").background(Color.white).cornerRadius(6).padding(EdgeInsets(top: 1, leading: 5, bottom: 1, trailing: 5)).font(.custom("GillSans", size: 28))
+                    Text(pokemonEntry.name.uppercased()).frame(width: 285, height: 50).background(Color.white).cornerRadius(6).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30)).font(.custom("GillSans", size: 26))
                         .bold()
                     
                     Spacer().frame(height: 5)
                     
-                }.fixedSize().cornerRadius(6).padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.black, lineWidth: 5)
-                )
+                }.cornerRadius(5)
+                    //.padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100))
+                    .background(.yellow)
+                    .shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.black, lineWidth: 5)
+                    )
                 
                 Spacer().frame(height: 25)
                 
                 VStack {
-                    Spacer().frame(height: 10)
+                    Spacer().frame(height: 5)
                     
-                    VStack(spacing: 6) {
+                    VStack(alignment: .leading, spacing: 6) {
                         // Display Pokemon Entry details from API
-                        Text(pokemonEntry.name.capitalized)
+                        Text("Number: \(capturedPokemon.currentPokemonIndex)")
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
                     }
-                    .font(.custom("GillSans", size: 25))
-                    .padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1))
+                    .frame(width: 285, height: 115)
+                    .font(.custom("GillSans", size: 22))
                     .background(Color.white)
                     .cornerRadius(6)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+//                    .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.leading)
                     
                     Spacer().frame(height: 5)
                 }
                 .cornerRadius(5)
-                .padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100))
+                //.padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100))
                 .background(.yellow)
                 .shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
                 .overlay(
@@ -71,22 +76,38 @@ struct PokemonDetailView: View {
                     
                     // Display Pokemon sprite from API
                     if (pokemonSelected.sprites.front_default != nil) {
-                        AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.40).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1))
+                        AsyncImage(url: URL(string: pokemonSelected.sprites.front_default!), scale: 0.55)
+                            //.frame(width: 200, height: 100)
+                            .padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1))
+ 
                     }
+                    
                     Spacer().frame(height: 1)
                 }
                 
                 VStack(alignment: .leading, spacing: 6){
                     
-                    HStack{
+                    VStack{
                         
                         // Display description of Pokemon
-                        Text(self.flavorText).fixedSize(horizontal: false, vertical: true).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).multilineTextAlignment(.leading)
+                        Text(self.flavorText)
+                            .frame(width: 270, height: 200)
+                            .font(.custom("GillSans", size: 22))
+                            .background(Color.white)
+                            .cornerRadius(6)
+                            .padding(EdgeInsets(top: 10, leading: 37, bottom: 10, trailing: 37))
+                            //.fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
                         
-                    }.cornerRadius(2).padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)).background(Color.white)
-                        .font(.custom("GillSans", size: 25))
+                    }
                     
-                }.cornerRadius(15).padding(EdgeInsets(top: 10, leading: 80, bottom: 10, trailing: 80)).background(.yellow).shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8).overlay(
+                }
+                
+                .cornerRadius(5)
+                //.padding(EdgeInsets(top: 0, leading: 100, bottom: 5, trailing: 100))
+                .background(.yellow)
+                .shadow(color: .black.opacity(0.4), radius: 5, x: 8, y: 8)
+                .overlay(
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.black, lineWidth: 5)
                 )

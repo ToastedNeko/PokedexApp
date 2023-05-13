@@ -29,6 +29,7 @@ import SwiftUI
 
 class CapturedPokemon: ObservableObject{
     @Published var capturedPokemon: [String: Bool] = [:]
+    @Published var currentPokemonIndex: Int = 0
     
     func toggleCapture(pokemonName: String) {
         
