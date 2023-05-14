@@ -87,4 +87,4 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 [environment-objects]: https://developer.apple.com/documentation/swiftui/environmentobject
 [pokeball]: https://www.pixilart.com/art/pokeball-1809f326f5859ac
 [pokedex-image]: https://www.peakpx.com/en/hd-wallpaper-desktop-vyidn
-
+[pokedex-icon]: https://icon-library.com/icon/pokemon-app-icon-9.html
