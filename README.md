@@ -8,15 +8,22 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 
 # Demos
 
-![GIF Example](https://s12.gifyu.com/images/PokedexSplashScreen.gif)
+<div style="text-align: center;">
+  <img src="https://s12.gifyu.com/images/PokedexSplashScreen.gif" alt="GIF Example" />
+</div>
 
-![GIF Example](https://s12.gifyu.com/images/Scroll.gif)
+<div style="text-align: center;">
+  <img src="https://s12.gifyu.com/images/Scroll.gif" alt="GIF Example" />
+</div>
 
-![GIF Example](https://s12.gifyu.com/images/ChooseCharmeleon.gif)
+<div style="text-align: center;">
+  <img src="https://s12.gifyu.com/images/ChooseCharmeleon.gif" alt="GIF Example" />
+</div>
 
-![GIF Example](https://s11.gifyu.com/images/SearchPikachu.gif)
+<div style="text-align: center;">
+  <img src="https://s11.gifyu.com/images/SearchPikachu.gif" alt="GIF Example" />
+</div>
 
- 
 # Api
 
 ### Source code for part of API Setup and part of PokemonPokedexView:
@@ -72,5 +79,5 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 [environment-objects]: https://developer.apple.com/documentation/swiftui/environmentobject
 [pokeball]: https://www.pixilart.com/art/pokeball-1809f326f5859ac
 [pokedex-image]: https://www.peakpx.com/en/hd-wallpaper-desktop-vyidn
-[pokedex-icon]: https://icon-library.com/icon/pokedex-icon-15.html
-[cached-async-image]: https://github.com/lorenzofiamingo/swiftui-cached-async-image
+[pokedex-icon]: https://icon-library.com
+
