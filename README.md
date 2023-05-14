@@ -44,3 +44,10 @@ There is also a feature to mark which Pokemon have been caught by the player in 
   ### SwiftUI CachedAsyncImage
        
     1) [Link to Github for CachedAsyncImage](https://github.com/lorenzofiamingo/swiftui-cached-async-image)
+
+# Api
+
+  ### Source code for part of API Setup and part of PokemonPokedexView:
+  
+   1. [PokeAPI](https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251)
+    
