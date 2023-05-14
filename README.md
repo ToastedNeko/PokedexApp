@@ -16,7 +16,7 @@ There is also a feature to mark which Pokemon have been caught by the player in 
 
   ### Source code for part of API Setup and part of PokemonPokedexView: 
        
-    1. [SwiftUI Pokédex App - Indently Youtube](https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently)
+    1. [SwiftUIPokédexApp](https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently)
        
   ### UserDefaults:
        
