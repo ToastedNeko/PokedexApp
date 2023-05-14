@@ -5,7 +5,6 @@
 //  Created by Kinme on 4/23/23.
 //
 //
-
 /*
  
  This displays the details of a Pokemon selected by user
@@ -18,7 +17,6 @@
 
 
 import SwiftUI
-
 
 struct PokemonDetailView: View {
     var pokemonEntry: PokemonEntry

@@ -6,6 +6,8 @@
 //
 
 /*
+ Image for splashscreen:
+ https://www.peakpx.com/en/hd-wallpaper-desktop-vyidn
  
  This displays the splashscreen Pokedex cover
  
@@ -14,7 +16,6 @@
 import SwiftUI
 import SSSwiftUIGIFView
 import SDWebImage
-
 
 struct PokedexSplashScreenView: View {
     @State private var showPokedex = false

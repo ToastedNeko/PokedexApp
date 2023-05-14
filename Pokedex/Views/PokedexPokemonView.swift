@@ -5,6 +5,7 @@
 //  Created by Kinme on 4/20/23.
 //
 /*
+ 
  This displays all of the Pokemon entries available in
  the Pokedex
  
@@ -31,7 +32,10 @@ struct PokedexPokemonView: View {
     @State var pokemonDataLoaded = false
     @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0, species: Species(), types: [PokemonType](), id: 0)
     
-    // Allows for the Pokedex list to be searched through
+    // allows for the Pokedex list to be searched through
+    // searchbar shows results
+    // if the search bar is empty, display all other pokemon
+    // otherwise, filter the pokemon with the letters typed
     var filteredPokemon: [PokemonEntry] {
         if searchText.isEmpty {
             return pokemon
@@ -44,16 +48,11 @@ struct PokedexPokemonView: View {
         NavigationView{
             List{
                 
-                // searchbar shows results
-                // if the search bar is empty, display all other pokemon
-                // otherwise, filter the pokemon with the letters typed
-                
                 // pokemon.enumerated() allows for index of Pokemon to be retrieved
                 // each Pokemon has their own entry number in the Pokedex
                 ForEach(Array(filteredPokemon.enumerated()), id: \.1.id) { index, entry in
                     
                     HStack{
-                        
                         // Default image is a grayscale, low opacity pokeball to signify the user doesn't yet own this Pokemon
                         if(capturedPokemon.isPokemonCaptured(pokemonName: entry.name)){
                             Image("Pokeball1")
@@ -116,9 +115,6 @@ struct PokedexPokemonView: View {
     }
     
 }
-
-
-
 
 //struct PokedexPokemonView_Previews: PreviewProvider {
 //    static var previews: some View {

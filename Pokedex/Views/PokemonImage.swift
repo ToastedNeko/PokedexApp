@@ -43,8 +43,6 @@ struct PokemonImage: View {
                 
             }
         
-        //            .clipShape(Circle())
-        //            .foregroundColor(Color.gray.opacity(0.80))
             .background(Image("Placeholder").opacity(0.10).frame(width:0.01, height: 0.01))
         
     }

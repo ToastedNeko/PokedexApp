@@ -3,9 +3,8 @@
 //  Pokedex
 //
 //  Created by Kinme on 4/20/23.
-
+//
 // This app is a pokedex that contains 251 different Pokemon and details for them.
-
 /*
  
  Environment Objects:

@@ -28,7 +28,7 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 
 # Api
 
-### Source code for part of API Setup and part of PokemonPokedexView:
+### API data for each Pokedex entry:
   
 1. [PokeAPI][pokeapi]
 

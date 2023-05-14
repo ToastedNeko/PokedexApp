@@ -31,10 +31,10 @@ class CapturedPokemon: ObservableObject{
     @Published var capturedPokemon: [String: Bool] = [:]
     @Published var currentPokemonIndex: Int = 0
     
-    func toggleCapture(pokemonName: String) {
-        if let isCaptured = capturedPokemon[pokemonName] {
+    func toggleCapture(pokemonName: String){
+        if let isCaptured = capturedPokemon[pokemonName]{
             capturedPokemon[pokemonName] = !isCaptured
-        } else {
+        } else{
             capturedPokemon[pokemonName] = true
         }
         saveCapturedPokemon()
@@ -44,17 +44,17 @@ class CapturedPokemon: ObservableObject{
         return capturedPokemon[pokemonName] ?? false
     }
     
-    func saveCapturedPokemon() {
+    func saveCapturedPokemon(){
         let capturedPokemonData = try? JSONEncoder().encode(capturedPokemon)
         UserDefaults.standard.set(capturedPokemonData, forKey: "CAPTURED_POKEMON")
     }
     
-    func loadCapturedPokemon() {
-        guard let capturedPokemonData = UserDefaults.standard.data(forKey: "CAPTURED_POKEMON") else {
+    func loadCapturedPokemon(){
+        guard let capturedPokemonData = UserDefaults.standard.data(forKey: "CAPTURED_POKEMON") else{
             return
         }
         
-        if let loadedCapturedPokemon = try? JSONDecoder().decode([String: Bool].self, from: capturedPokemonData) {
+        if let loadedCapturedPokemon = try? JSONDecoder().decode([String: Bool].self, from: capturedPokemonData){
             capturedPokemon = loadedCapturedPokemon
             //print(loadedCapturedPokemon)
         }
