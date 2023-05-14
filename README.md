@@ -10,7 +10,7 @@ There is also a feature to mark which Pokemon have been caught by the player in 
 
        ## PokeApi
        
-    1) (https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251)
+   1. [Item1](https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251)
     
 # Resources
 
