@@ -8,7 +8,10 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 
 # Demos
 
-![GIF Example](https://s12.gifyu.com/images/PokedexSplashScreen.gif)
+<div style="text-align: center;">
+  <img src="https://s12.gifyu.com/images/PokedexSplashScreen.gif" alt="GIF Example" />
+</div>
+
  
 # Api
 
