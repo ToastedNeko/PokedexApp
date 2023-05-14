@@ -7,14 +7,15 @@ Pokedex entries are based on the original, simplified pokedex from the first gam
 There is also a feature to mark which Pokemon have been caught by the player in game, and the ability to search through each of the Pokemon in the Pokedex.
  
 # Api
-    1) PokeApi
-       https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
+
+       PokeApi
+    1) https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251
     
 # Resources
-Source code for part of API Setup and part of PokemonPokedexView:
+       Source code for part of API Setup and part of PokemonPokedexView:
 
-    1) SwiftUI Pokédex App...    
-       https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
+       SwiftUI Pokédex App... 
+    1) https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
        
 UserDefaults:
 
@@ -33,9 +34,11 @@ UserDefaults:
     3) https://icon-library.com/icon/pokedex-icon-15.html
 
 # CocoaPods 
+
     1) SSSwiftUIGIFView
     2) SDWebImage
 
 # Package Dependencies
-    1) SwiftUI CachedAsyncImage
-       https://github.com/lorenzofiamingo/swiftui-cached-async-image
+
+       SwiftUI CachedAsyncImage
+    1) https://github.com/lorenzofiamingo/swiftui-cached-async-image
