@@ -9,19 +9,25 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 # Demos
 
 <div style="text-align: center;">
-  <img src="https://s12.gifyu.com/images/PokedexSplashScreen.gif" alt="GIF Example" />
+  <img src="https://s12.gifyu.com/images/PokedexSplashScreen.gif" alt="GIF Example" style="display: block; margin: 0 auto;" />
 </div>
 
-<div style="text-align: center;">
-  <img src="https://s12.gifyu.com/images/Scroll.gif" alt="GIF Example" />
-</div>
+<div style="height: 20px;"></div>
 
 <div style="text-align: center;">
-  <img src="https://s12.gifyu.com/images/ChooseCharmeleon.gif" alt="GIF Example" />
+  <img src="https://s12.gifyu.com/images/Scroll.gif" alt="GIF Example" style="display: block; margin: 0 auto;" />
 </div>
 
+<div style="height: 20px;"></div>
+
 <div style="text-align: center;">
-  <img src="https://s11.gifyu.com/images/SearchPikachu.gif" alt="GIF Example" />
+  <img src="https://s12.gifyu.com/images/ChooseCharmeleon.gif" alt="GIF Example" style="display: block; margin: 0 auto;" />
+</div>
+
+<div style="height: 20px;"></div>
+
+<div style="text-align: center;">
+  <img src="https://s11.gifyu.com/images/SearchPikachu.gif" alt="GIF Example" style="display: block; margin: 0 auto;" />
 </div>
 
 # Api
@@ -75,9 +81,5 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 [swiftui-pokedex]: https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently
 [userdefaults-simple]: https://www.simpleswiftguide.com/how-to-use-userdefaults-in-swiftui/
 [userdefaults-settings]: https://www.hackingwithswift.com/books/ios-swiftui/storing-user-settings-with-userdefaults
-[share-data-between-views]: https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share-data-between-views
-[environment-objects]: https://developer.apple.com/documentation/swiftui/environmentobject
-[pokeball]: https://www.pixilart.com/art/pokeball-1809f326f5859ac
-[pokedex-image]: https://www.peakpx.com/en/hd-wallpaper-desktop-vyidn
-[pokedex-icon]: https://icon-library.com
-
+[share-data-between-views]: https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share
+[cached-async-image]: https://github.com/lorenzofiamingo/swiftui-cached-async-image
