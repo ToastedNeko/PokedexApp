@@ -22,7 +22,7 @@ import SwiftUI
 
 struct PokemonDetailView: View {
     var pokemonEntry: PokemonEntry
-    @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0, species: Species(), types: [PokemonType]())
+    @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0, species: Species(), types: [PokemonType](), id: 0)
     @State var pokemonSpecies = PokemonSpecies(flavor_text_entries: [FlavorTextEntry]())
     @State var flavorText = ""
     @State var showPokeBall = "GrayPokeball3"
@@ -61,7 +61,7 @@ struct PokemonDetailView: View {
                     
                     VStack(alignment: .leading, spacing: 6) {
                         // Display Pokemon Entry details from API
-                        Text("Number: \(capturedPokemon.currentPokemonIndex)")
+                        Text("Number: \(pokemonSelected.id)")
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
                     }

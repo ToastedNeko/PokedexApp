@@ -39,6 +39,7 @@ struct PokemonSelected: Codable{
     var height: Int
     var species: Species
     var types: [PokemonType]
+    var id: Int
     
 }
 

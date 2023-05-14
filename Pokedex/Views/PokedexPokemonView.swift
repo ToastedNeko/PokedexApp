@@ -29,6 +29,16 @@ struct PokedexPokemonView: View {
     @State var searchText = ""
     @EnvironmentObject var capturedPokemon: CapturedPokemon
     @State var pokemonDataLoaded = false
+    @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0, species: Species(), types: [PokemonType](), id: 0)
+    
+    // Allows for the Pokedex list to be searched through
+    var filteredPokemon: [PokemonEntry] {
+        if searchText.isEmpty {
+            return pokemon
+        } else {
+            return pokemon.filter { $0.name.contains(searchText.lowercased()) }
+        }
+    }
     
     var body: some View {
         NavigationView{
@@ -40,7 +50,8 @@ struct PokedexPokemonView: View {
                 
                 // pokemon.enumerated() allows for index of Pokemon to be retrieved
                 // each Pokemon has their own entry number in the Pokedex
-                ForEach(Array(pokemon.enumerated()), id: \.1.id) { index, entry in
+                ForEach(Array(filteredPokemon.enumerated()), id: \.1.id) { index, entry in
+                    
                     HStack{
                         
                         // Default image is a grayscale, low opacity pokeball to signify the user doesn't yet own this Pokemon
@@ -53,14 +64,16 @@ struct PokedexPokemonView: View {
                                 .padding(EdgeInsets(top: 1, leading: -10, bottom: 1, trailing: 6))
                         }
                         
-                        Text(" #\(index + 1)")
-                            .padding(.trailing, 2).bold()
+                        if searchText.isEmpty{
+                            Text(" #\(index + 1)")
+                                .padding(.trailing, 2).bold()
+                        }
                         
                         NavigationLink(
                             destination: PokemonDetailView(pokemonEntry: entry)
                                 .environmentObject(capturedPokemon)
                                 .onAppear {
-                                    capturedPokemon.currentPokemonIndex = index + 1
+                                    
                                 },
                             label: {
                                 Text("\(entry.name)".capitalized)
@@ -72,11 +85,11 @@ struct PokedexPokemonView: View {
                         Spacer()
                         
                     }
-                    
                     .padding(.vertical, 5)
+                    .font(searchText.isEmpty ? .custom("GillSans", size: 22) : .custom("Arial", size: 18) .bold())
+                    .foregroundColor(searchText.isEmpty ? .black : .blue)
                 }
             }
-            
             .onAppear{
                 // call the completion listener
                 // once completion is retreived, return it and assign to
@@ -101,7 +114,9 @@ struct PokedexPokemonView: View {
         }.background(Color.black.ignoresSafeArea())
             .font(.custom("GillSans", size: 22))
     }
+    
 }
+
 
 
 
