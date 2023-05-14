@@ -5,6 +5,10 @@ The goal of this app was to create a functional Pokedex. This Pokedex contains t
 Pokedex entries are based on the original, simplified pokedex from the first games in the series. The data included is from PokeApi and contains the sprite, name, number, height, weight, and description of each of the Pokemon.
 
 There is also a feature to mark which Pokemon have been caught by the player in-game and the ability to search through each of the Pokemon in the Pokedex.
+
+# Demos
+
+![GIF Example](https://s12.gifyu.com/images/PokedexSplashScreen.gif)
  
 # Api
 
