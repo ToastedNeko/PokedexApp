@@ -7,8 +7,8 @@
 
 /*
  
- This View gets the species so that the description of
- each Pokemon can be gotten for the PokemonDetailView
+ This view gets the species so that the description of
+ each Pokemon can be retrieved for the PokemonDetailView
  
  */
 

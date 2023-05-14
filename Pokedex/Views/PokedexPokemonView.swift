@@ -47,9 +47,8 @@ struct PokedexPokemonView: View {
     var body: some View {
         NavigationView{
             List{
-                
                 // pokemon.enumerated() allows for index of Pokemon to be retrieved
-                // each Pokemon has their own entry number in the Pokedex
+                // each Pokemon has their own number in the Pokedex
                 ForEach(Array(filteredPokemon.enumerated()), id: \.1.id) { index, entry in
                     
                     HStack{
