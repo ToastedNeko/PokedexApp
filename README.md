@@ -84,3 +84,7 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 [userdefaults-settings]: https://www.hackingwithswift.com/books/ios-swiftui/storing-user-settings-with-userdefaults
 [share-data-between-views]: https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share
 [cached-async-image]: https://github.com/lorenzofiamingo/swiftui-cached-async-image
+[environment-objects]: https://developer.apple.com/documentation/swiftui/environmentobject
+[pokeball]: https://www.pixilart.com/art/pokeball-1809f326f5859ac
+[pokedex-image]: https://www.peakpx.com/en/hd-wallpaper-desktop-vyidn
+
