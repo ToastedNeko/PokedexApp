@@ -8,27 +8,19 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 
 # Demos
 
-<div style="text-align: center;">
-  <img src="https://s12.gifyu.com/images/PokedexSplashScreen.gif" alt="GIF Example" style="display: block; margin: 0 auto;" />
-</div>
+![GIF Example](https://s12.gifyu.com/images/PokedexSplashScreen.gif)
 
-<div style="height: 20px;"></div>
+---
 
-<div style="text-align: center;">
-  <img src="https://s12.gifyu.com/images/Scroll.gif" alt="GIF Example" style="display: block; margin: 0 auto;" />
-</div>
+![GIF Example](https://s12.gifyu.com/images/Scroll.gif)
 
-<div style="height: 20px;"></div>
+---
 
-<div style="text-align: center;">
-  <img src="https://s12.gifyu.com/images/ChooseCharmeleon.gif" alt="GIF Example" style="display: block; margin: 0 auto;" />
-</div>
+![GIF Example](https://s12.gifyu.com/images/ChooseCharmeleon.gif)
 
-<div style="height: 20px;"></div>
+---
 
-<div style="text-align: center;">
-  <img src="https://s11.gifyu.com/images/SearchPikachu.gif" alt="GIF Example" style="display: block; margin: 0 auto;" />
-</div>
+![GIF Example](https://s11.gifyu.com/images/SearchPikachu.gif)
 
 # Api
 
