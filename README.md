@@ -20,15 +20,19 @@ There is also a feature to mark which Pokemon have been caught by the player in 
    
   ### UserDefaults:
     1. [UserDefaults Simple](https://www.simpleswiftguide.com/how-to-use-userdefaults-in-swiftui/)
+    
     2. [UserDefaults Settings](https://www.hackingwithswift.com/books/ios-swiftui/storing-user-settings-with-userdefaults)
     
   ### Environment Objects:
     1. [Share Data Between Views](https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share-data-between-views)
+    
     2. [Environment Objects](https://developer.apple.com/documentation/swiftui/environmentobject)
     
   ### Images:
     1. [Pokeball](https://www.pixilart.com/art/pokeball-1809f326f5859ac)
+    
     2. [Pokedex Image](https://www.peakpx.com/en/hd-wallpaper-desktop-vyidn)
+    
     3. [Pokedex Icon](https://icon-library.com/icon/pokedex-icon-15.html)
   
 
@@ -37,6 +41,7 @@ There is also a feature to mark which Pokemon have been caught by the player in 
   ### Source code for part of API Setup and part of PokemonPokedexView:
   
     1. SSSwiftUIGIFView
+    
     2. SDWebImage
    
     
