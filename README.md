@@ -7,10 +7,8 @@ Pokedex entries are based on the original, simplified pokedex from the first gam
 There is also a feature to mark which Pokemon have been caught by the player in game, and the ability to search through each of the Pokemon in the Pokedex.
  
 # Api
-
-       ## PokeApi
        
-   1. [Item1](https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251)
+   1. [PokeAPI](https://pokeapi.co/api/v2/pokemon/?offset=0&limit=251)
     
 # Resources
 
