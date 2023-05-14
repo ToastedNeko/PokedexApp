@@ -14,21 +14,21 @@ There is also a feature to mark which Pokemon have been caught by the player in 
     
 # Resources
 
-       ### Source code for part of API Setup and part of PokemonPokedexView: 
+  ### Source code for part of API Setup and part of PokemonPokedexView: 
        
     1. [SwiftUI Pokédex App - Indently Youtube](https://www.youtube.com/watch?v=dmIot8Weoxg&ab_channel=Indently)
        
-       ### UserDefaults:
+  ### UserDefaults:
        
     2. [UserDefaults - Simple Guide](https://www.simpleswiftguide.com/how-to-use-userdefaults-in-swiftui/)
     3. [UserDefaults - User Settings](https://www.hackingwithswift.com/books/ios-swiftui/storing-user-settings-with-userdefaults)
     
-       ### Environment Objects:
+  ### Environment Objects:
  
     1. [Share Data Between Views](https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-environmentobject-to-share-data-between-views)
     2. [Environment Objects](https://developer.apple.com/documentation/swiftui/environmentobject)
     
-       ### Images:
+  ### Images:
  
     1. [Pokeball](https://www.pixilart.com/art/pokeball-1809f326f5859ac)
     2. [Pokedex Image](https://www.peakpx.com/en/hd-wallpaper-desktop-vyidn)
@@ -41,6 +41,6 @@ There is also a feature to mark which Pokemon have been caught by the player in 
 
 # Package Dependencies
 
-       ### SwiftUI CachedAsyncImage
+  ### SwiftUI CachedAsyncImage
        
     1) [Link to Github for CachedAsyncImage](https://github.com/lorenzofiamingo/swiftui-cached-async-image)
