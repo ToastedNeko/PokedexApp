@@ -6,6 +6,8 @@ Pokedex entries are based on the original, simplified pokedex from the first gam
 
 There is also a feature to mark which Pokemon have been caught by the player in-game and the ability to search through each of the Pokemon in the Pokedex.
 
+---
+
 # Demos
 
 ![GIF Example](https://s12.gifyu.com/images/PokedexSplashScreen.gif)
@@ -22,11 +24,15 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 
 ![GIF Example](https://s11.gifyu.com/images/SearchPikachu.gif)
 
+---
+
 # Api
 
 ### Source code for part of API Setup and part of PokemonPokedexView:
   
 1. [PokeAPI][pokeapi]
+
+---
 
 # Resources
 
@@ -53,6 +59,8 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 2. [Pokedex Image][pokedex-image]
     
 3. [Pokedex Icon][pokedex-icon]
+
+---
   
 # CocoaPods
 
@@ -62,6 +70,7 @@ There is also a feature to mark which Pokemon have been caught by the player in-
     
 2. SDWebImage
    
+---
     
 # Package Dependencies
 
