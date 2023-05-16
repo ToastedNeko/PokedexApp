@@ -16,6 +16,12 @@ import Foundation
 
 struct PokemonSpecies: Codable{
     var flavor_text_entries: [FlavorTextEntry]
+    var generation: Generation
+}
+
+struct Generation: Codable{
+    var name: String
+
 }
 
 struct DescriptionLanguage: Codable{
@@ -29,7 +35,7 @@ struct DescriptionLanguage: Codable{
 struct FlavorTextEntry: Codable{
     var flavor_text: String
     var language: DescriptionLanguage
-    //var version: DescriptionVersion
+
 }
 
 

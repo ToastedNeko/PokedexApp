@@ -21,7 +21,7 @@ import SwiftUI
 struct PokemonDetailView: View {
     var pokemonEntry: PokemonEntry
     @State var pokemonSelected = PokemonSelected(sprites: PokemonSprites(), name: "", weight: 0, height: 0, species: Species(), types: [PokemonType](), id: 0)
-    @State var pokemonSpecies = PokemonSpecies(flavor_text_entries: [FlavorTextEntry]())
+    @State var pokemonSpecies = PokemonSpecies(flavor_text_entries: [FlavorTextEntry](), generation: Generation(name: ""))
     @State var flavorText = ""
     @State var showPokeBall = "GrayPokeball3"
     @EnvironmentObject var capturedPokemon: CapturedPokemon
@@ -62,6 +62,7 @@ struct PokemonDetailView: View {
                         Text("Number: \(pokemonSelected.id)")
                         Text("Height: " + String(round(Double(pokemonSelected.height) * 3.93701 )) + "\"")
                         Text("Weight: " + String(round(Double(pokemonSelected.weight) / 4.536)) + " lbs")
+//                        Text("Generation: \(pokemonSpecies.generation.name)")
                     }
                     .frame(width: 285, height: 115)
                     .font(.custom("GillSans", size: 22))
@@ -182,7 +183,7 @@ struct PokemonDetailView: View {
             
             PokemonSpeciesApi().getData(url: speciesUrl){ speciesData in
                 self.pokemonSpecies = speciesData
-                self.flavorText = speciesData.flavor_text_entries.first(where: { $0.language.name == "en"})?.flavor_text ?? ""
+                self.flavorText = speciesData.flavor_text_entries.first(where: { $0.language.name == "en" })?.flavor_text ?? ""
             }
         }
     }
