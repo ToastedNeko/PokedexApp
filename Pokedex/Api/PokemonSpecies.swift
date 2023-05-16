@@ -18,9 +18,21 @@ struct PokemonSpecies: Codable{
     var flavor_text_entries: [FlavorTextEntry]
 }
 
+struct DescriptionLanguage: Codable{
+    var name: String
+}
+
+//struct DescriptionVersion: Codable{
+//    var name: String
+//}
+
 struct FlavorTextEntry: Codable{
     var flavor_text: String
+    var language: DescriptionLanguage
+    //var version: DescriptionVersion
 }
+
+
 
 class PokemonSpeciesApi{
     // once data is retrieved, don't end the function; send it back to us

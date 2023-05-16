@@ -182,7 +182,7 @@ struct PokemonDetailView: View {
             
             PokemonSpeciesApi().getData(url: speciesUrl){ speciesData in
                 self.pokemonSpecies = speciesData
-                self.flavorText = speciesData.flavor_text_entries[0].flavor_text
+                self.flavorText = speciesData.flavor_text_entries.first(where: { $0.language.name == "en"})?.flavor_text ?? ""
             }
         }
     }
@@ -193,3 +193,5 @@ struct PokemonDetailView: View {
 //        PokemonDetailView(pokemonEntry: PokemonEntry)
 //    }
 //}
+
+// self.flavorText = speciesData.flavor_text_entries.first(where: { $0.language.name == "en" && $0.version.name == "yellow"})?.flavor_text ?? ""
