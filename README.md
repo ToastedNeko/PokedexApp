@@ -6,6 +6,8 @@ Pokedex entries are based on the original, simplified pokedex from the first gam
 
 There is also a feature to mark which Pokemon have been caught by the player in-game and the ability to search through each of the Pokemon in the Pokedex.
 
+Currently best viewed on **iPhone Pro Max** or **iPhone Pro**.
+
 ---
 
 # Demos
