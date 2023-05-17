@@ -8,7 +8,7 @@ There is also a feature to mark which Pokemon have been caught by the player in-
 
 
 
-Currently best viewed on **iPhone Pro Max** or **iPhone Pro**.
+Currently best viewed on **iPhone Pro Max**.
 
 ---
 
