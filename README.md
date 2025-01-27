@@ -14,19 +14,19 @@ Currently best viewed on **iPhone Pro Max**.
 
 # Demos
 
-![GIF Example](https://s12.gifyu.com/images/PokedexSplashScreen.gif)
+TODO
 
 ---
 
-![GIF Example](https://s12.gifyu.com/images/Scroll.gif)
+
 
 ---
 
-![GIF Example](https://s12.gifyu.com/images/ChooseCharmeleon.gif)
+
 
 ---
 
-![GIF Example](https://s11.gifyu.com/images/SearchPikachu.gif)
+
 
 ---
 
