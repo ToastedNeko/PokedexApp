@@ -18,19 +18,19 @@ TODO
 
 ---
 
-![DEMO Example](/Pokedex/Resources/Open_and_Mark_As_Caught.gif)
+<img src="/Pokedex/Resources/Open_and_Mark_As_Caught.gif" width="300">
 
 ---
 
-![DEMO Example](/Pokedex/Resources/Remove_Capture.gif)
+<img src="/Pokedex/Resources/Remove_Capture.gif" width="300">
 
 ---
 
-![DEMO Example](/Pokedex/Resources/Search_and_Capture.gif)
+<img src="/Pokedex/Resources/Search_and_Capture.gif" width="300">
 
 ---
 
-![DEMO Example](/Pokedex/Resources/Scroll.gif)
+<img src="/Pokedex/Resources/Scroll.gif" width="300">
 
 ---
 
