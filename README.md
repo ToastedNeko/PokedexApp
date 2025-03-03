@@ -14,23 +14,21 @@ Currently best viewed on **iPhone Pro Max**.
 
 # Demos
 
-TODO
+---
+
+<p align="center"><img src="/Pokedex/Resources/Open_and_Mark_As_Caught.gif" width="300"></p>
 
 ---
 
-<img src="/Pokedex/Resources/Open_and_Mark_As_Caught.gif" width="300">
+<p align="center"><img src="/Pokedex/Resources/Remove_Capture.gif" width="300"></p>
 
 ---
 
-<img src="/Pokedex/Resources/Remove_Capture.gif" width="300">
+<p align="center"><img src="/Pokedex/Resources/Search_and_Capture.gif" width="300"></p>
 
 ---
 
-<img src="/Pokedex/Resources/Search_and_Capture.gif" width="300">
-
----
-
-<img src="/Pokedex/Resources/Scroll.gif" width="300">
+<p align="center"><img src="/Pokedex/Resources/Scroll.gif" width="300"></p>
 
 ---
 
