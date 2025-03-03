@@ -16,18 +16,22 @@ Currently best viewed on **iPhone Pro Max**.
 
 ---
 
+<h3 align="center">Open Pokedex and Mark Pokemon as Caught</h3>
 <p align="center"><img src="/Pokedex/Resources/Open_and_Mark_As_Caught.gif" width="300"></p>
 
 ---
 
+<h3 align="center">Remove Captured Status</h3>
 <p align="center"><img src="/Pokedex/Resources/Remove_Capture.gif" width="300"></p>
 
 ---
 
+<h3 align="center">Search for a Pokemon and Capture</h3>
 <p align="center"><img src="/Pokedex/Resources/Search_and_Capture.gif" width="300"></p>
 
 ---
 
+<h3 align="center">Scroll Through Pokedex Entries</h3>
 <p align="center"><img src="/Pokedex/Resources/Scroll.gif" width="300"></p>
 
 ---
