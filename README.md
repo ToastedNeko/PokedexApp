@@ -18,15 +18,19 @@ TODO
 
 ---
 
-
-
----
-
-
+![DEMO Example](/Pokedex/Resources/Open_and_Mark_As_Caught.gif)
 
 ---
 
+![DEMO Example](/Pokedex/Resources/Remove_Capture.gif)
 
+---
+
+![DEMO Example](/Pokedex/Resources/Search_and_Capture.gif)
+
+---
+
+![DEMO Example](/Pokedex/Resources/Scroll.gif)
 
 ---
 

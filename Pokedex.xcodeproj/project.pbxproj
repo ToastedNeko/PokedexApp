@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,10 @@
 		79B1BB2529F4CF0300CAD989 /* PokemonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImage.swift; sourceTree = "<group>"; };
 		FE25C33E8209F69F016703E6 /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		79C3BA422D7556970045A3A4 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7910B3DD29F11CFD00A3CF67 /* Frameworks */ = {
@@ -94,6 +98,7 @@
 		7910B3E229F11CFD00A3CF67 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				79C3BA422D7556970045A3A4 /* Resources */,
 				7920067E29F4DBC000861517 /* Info.plist */,
 				79B1BB2729F4D93500CAD989 /* Fonts */,
 				79258D152A0EEF0500C09C65 /* Services */,
@@ -167,6 +172,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				79C3BA422D7556970045A3A4 /* Resources */,
 			);
 			name = Pokedex;
 			packageProductDependencies = (
